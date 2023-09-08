@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #FFDDDD; /* 仮の色です */
+    overflow: hidden; /* 画像がheaderの高さを超えた場合にはみ出しを防ぐため */
+
+     /* ヘッダー画像の配置位置調整 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #FFDDDD; /* 仮の色です。必要に応じて変更してください */
+}
+
+header img {
+    width: auto;  /* 幅は自動 */
+    height: 100%;  /* 高さを100%に */
+    max-width: 100%;  /* 最大幅を100%に */
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 160px); /* 80px (ヘッダー) + 80px (フッター) を引いた高さに設定 */
+    background-size: contain; /* or `cover`, 画像のアスペクト比を維持 */
+    background-position: center; /* 画像背景を中央に配置 */
+    background-repeat: no-repeat; /* 背景画像の繰り返しを防ぐ */
+}
+
+#image-display {
+    width: 355px;
+    height: 355px;
+    margin: 20px auto; /* 画像表示枠を中央に配置するためのマージン設定 */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#change-image-button {
+    display: block;
+    width: 175px;
+    height: 60px;
+    margin: 20px auto; /* ボタンを中央に配置するためのマージン設定 */
+    background-color: #FFDDDD;
+    border: none;
+    border-radius: 5px; /* ボタンの角を少し丸くする */
+    cursor: pointer; /* ホバー時にカーソルをポインターにする */
+}
