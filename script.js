@@ -65,10 +65,20 @@ function displayRandomKujiImage() {
     }
 }
 
+function updateAutoButtonText(isRunning) {
+    const autoButton = document.getElementById("auto-button");
+    if (isRunning) {
+        autoButton.innerHTML = "一時停止<br>"; // 画像が動作しているときのテキスト
+    } else {
+        autoButton.innerHTML = "オススメ！<br>自動 de<br>おみくじ"; // 画像が停止しているときの初期テキスト
+    }
+}
+
 function startAutoKuji() {
     if (autoInterval) {
         clearInterval(autoInterval);  // If already running, stop it
         autoInterval = null;
+        updateAutoButtonText(false);  // Update button text to initial state
     } else {
         autoInterval = setInterval(() => {
             displayRandomKujiImage();
@@ -80,7 +90,9 @@ function startAutoKuji() {
                 imageUrl.includes("kuji00005.jpg")) {
                     clearInterval(autoInterval);
                     autoInterval = null;
+                    updateAutoButtonText(false);  // Update button text to initial state
             }
         }, 500);  // Change every 500ms
+        updateAutoButtonText(true);  // Update button text to indicate it's running
     }
 }
