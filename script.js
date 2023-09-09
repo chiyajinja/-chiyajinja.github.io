@@ -52,3 +52,35 @@ function changeKujiImage() {
 
 // ボタンがクリックされたときにchangeKujiImage関数を実行
 document.getElementById('change-image-button').addEventListener('click', changeKujiImage);
+
+let autoInterval = null;
+
+document.getElementById("manual-button").addEventListener("click", displayRandomKujiImage);
+document.getElementById("auto-button").addEventListener("click", startAutoKuji);
+
+function displayRandomKujiImage() {
+    const kujiElement = document.querySelector('#kuji-image');
+    const randomIndex = Math.floor(Math.random() * 367);
+    kujiElement.src = `images/kuji/kuji${String(randomIndex + 1).padStart(5, '0')}.jpg`;
+}
+
+function startAutoKuji() {
+    if (autoInterval) {
+        clearInterval(autoInterval);  // If already running, stop it
+        autoInterval = null;
+    } else {
+        autoInterval = setInterval(() => {
+            displayRandomKujiImage();
+            const kujiElement = document.querySelector('#kuji-image');
+            if (kujiElement.src.includes("kuji00001.jpg") ||
+                kujiElement.src.includes("kuji00002.jpg") ||
+                kujiElement.src.includes("kuji00003.jpg") ||
+                kujiElement.src.includes("kuji00004.jpg") ||
+                kujiElement.src.includes("kuji00005.jpg")) {
+                    clearInterval(autoInterval);
+                    autoInterval = null;
+            }
+        }, 500);  // Change every 500ms
+    }
+}
+
