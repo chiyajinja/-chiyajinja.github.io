@@ -63,3 +63,7 @@ button {
     height: 60px;
     margin-right: 10px; /* ボタン同士の間隔を確保 */
 }
+
+.terms {
+  font-size: 14px; /* 14ピクセルに設定 */
+}
