@@ -56,3 +56,17 @@ main {
     border-radius: 5px; /* ボタンの角を少し丸くする */
     cursor: pointer; /* ホバー時にカーソルをポインターにする */
 }
+#image-display {
+    width: 355px;
+    height: 355px;
+    margin-bottom: 20px; /* 画像とボタンの間のスペースを確保 */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+button {
+    width: 100px;
+    height: 60px;
+    margin-right: 10px; /* ボタン同士の間隔を確保 */
+}
