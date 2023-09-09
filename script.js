@@ -57,12 +57,17 @@ let autoInterval = null;
 
 document.getElementById("auto-button").addEventListener("click", startAutoKuji);
 
+let switchCount = 0; // 画像切り替え回数を保存する変数
+
 function displayRandomKujiImage() {
     const imageDisplayElement = document.getElementById('image-display');
     if (kujiImagesLoaded.length > 0) {
         const randomIndex = Math.floor(Math.random() * kujiImagesLoaded.length);
         imageDisplayElement.style.backgroundImage = kujiImagesLoaded[randomIndex];
     }
+    // おみくじ画像が切り替わったらカウントを増やす
+    switchCount++;
+    document.getElementById("count-display").innerText = switchCount;
 }
 
 function updateAutoButtonText(isRunning) {
