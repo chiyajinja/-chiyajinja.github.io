@@ -101,10 +101,6 @@ button {
     font-size: 24px;
     background-color: #FFFFFF; /* 任意の背景色 */
     border: 1px solid #000000; /* 枠線 */
-    position: absolute; /* 絶対位置指定 */
-    top: 50%; /* 上から50%の位置 */
-    left: 50%; /* 左から50%の位置 */
-    transform: translate(-50%, -50%); /* 真ん中に配置 */
     z-index: 1; /* 他の要素より前面に */
 }
 
@@ -118,6 +114,7 @@ button {
     justify-content: center; /* 水平方向の中央揃え */
     gap: 20px; /* ボタン間の間隔 */
     width: 100%; /* コンテナの幅を最大にする */
+    align-items: center; /* 垂直方向の中央揃え */
 }
 
 .terms {
