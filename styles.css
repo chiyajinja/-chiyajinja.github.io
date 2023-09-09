@@ -64,6 +64,13 @@ button {
     margin-right: 10px; /* ボタン同士の間隔を確保 */
 }
 
+.button-container {
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+    gap: 20px; /* ボタン間の間隔 */
+    width: 100%; /* コンテナの幅を最大にする */
+}
+
 .terms {
   font-size: 8px; /* 8ピクセルに設定 */
 }
