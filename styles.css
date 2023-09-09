@@ -87,11 +87,32 @@ main {
 }
 
 button {
-    width: 100px;
+    width: 80px;
     height: 60px;
     margin-right: 10px; /* ボタン同士の間隔を確保 */
 }
 
+/* カウント表示のスタイル */
+#count-display {
+    width: 80px;
+    height: 60px;
+    line-height: 60px; /* テキストを中央に配置 */
+    text-align: center; /* テキストを中央に配置 */
+    font-size: 24px;
+    background-color: #FFFFFF; /* 任意の背景色 */
+    border: 1px solid #000000; /* 枠線 */
+    position: absolute; /* 絶対位置指定 */
+    top: 50%; /* 上から50%の位置 */
+    left: 50%; /* 左から50%の位置 */
+    transform: translate(-50%, -50%); /* 真ん中に配置 */
+    z-index: 1; /* 他の要素より前面に */
+}
+
+/* ボタンの位置を調整 */
+#auto-button, #manual-button {
+    z-index: 2; /* カウント表示より前面に */
+}
+    
 .button-container {
     display: flex;
     justify-content: center; /* 水平方向の中央揃え */
