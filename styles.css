@@ -73,4 +73,5 @@ button {
 
 .terms {
   font-size: 8px; /* 8ピクセルに設定 */
+  padding: 20px; /* 上下左右すべてに20pxの余白を追加 */
 }
