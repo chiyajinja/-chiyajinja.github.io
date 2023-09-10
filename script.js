@@ -55,8 +55,6 @@ function changeKujiImage() {
     increaseCount(); // 画像が変わるたびにカウントアップ
 }
 
-document.getElementById('manual-button').addEventListener('click', changeKujiImage);
-
 let autoInterval = null;
 
 document.getElementById("auto-button").addEventListener("click", startAutoKuji);
@@ -85,8 +83,8 @@ function resetCounter() {
 }
 
 document.getElementById('manual-button').addEventListener('click', function() {
-    changeKujiImage();  // これはもともとの手動おみくじの関数
-    resetCounter();     // こちらでカウンターをリセット
+    changeKujiImage();  // まずおみくじ画像を変更
+    resetCounter();     // その後、カウンターをリセット
 });
 
 // startAutoKuji関数の中のリセット処理を変更
@@ -96,8 +94,6 @@ function startAutoKuji() {
         autoInterval = null;
         updateAutoButtonText(false);
     } else {
-        resetCounter(); // こちらでカウンターをリセット
-
         autoInterval = setInterval(() => {
             displayRandomKujiImage();
             const imageUrl = document.getElementById('image-display').style.backgroundImage;
@@ -109,6 +105,7 @@ function startAutoKuji() {
                     clearInterval(autoInterval);
                     autoInterval = null;
                     updateAutoButtonText(false);
+                    resetCounter(); // 5枚のうちの1枚が表示された時のみカウンターをリセット
             }
         }, 500);
         updateAutoButtonText(true);
