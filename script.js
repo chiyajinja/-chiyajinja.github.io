@@ -79,12 +79,25 @@ function updateAutoButtonText(isRunning) {
     }
 }
 
+function resetCounter() {
+    switchCount = 0;
+    document.getElementById("count-display").innerText = switchCount;
+}
+
+document.getElementById('manual-button').addEventListener('click', function() {
+    changeKujiImage();  // これはもともとの手動おみくじの関数
+    resetCounter();     // こちらでカウンターをリセット
+});
+
+// startAutoKuji関数の中のリセット処理を変更
 function startAutoKuji() {
     if (autoInterval) {
         clearInterval(autoInterval);
         autoInterval = null;
         updateAutoButtonText(false);
     } else {
+        resetCounter(); // こちらでカウンターをリセット
+
         autoInterval = setInterval(() => {
             displayRandomKujiImage();
             const imageUrl = document.getElementById('image-display').style.backgroundImage;
