@@ -1,10 +1,9 @@
 let imagesLoaded = [];
-
 const images = Array.from({ length: 288 }, (_, i) => `url("background_images/00${String(i + 1).padStart(3, '0')}.jpg")`);
 
 images.forEach(imageUrl => {
     const img = new Image();
-    img.src = imageUrl.substring(5, imageUrl.length - 2);  // "url()"を取り除く
+    img.src = imageUrl.substring(5, imageUrl.length - 2);
     img.onload = () => {
         imagesLoaded.push(imageUrl);
     };
@@ -54,29 +53,11 @@ let autoInterval = null;
 function updateAutoButtonText(isRunning) {
     const autoButton = document.getElementById("auto-button");
     if (isRunning) {
-        autoButton.innerHTML = "一時停止<br>";
+        autoButton.innerHTML = "一時停止";
     } else {
         autoButton.innerHTML = "オススメ！<br>自動 de<br>おみくじ";
     }
 }
-
-function showCongratulations() {
-    const imageUrl = document.getElementById('image-display').style.backgroundImage;
-    document.getElementById('kuji-result').style.backgroundImage = imageUrl;
-
-    document.getElementById('switch-count-result').innerText = `切り替わった画面の回数: ${switchCount}回`;
-
-    const percentage = ((switchCount / kujiImages.length) * 100).toFixed(2);
-    document.getElementById('percentage-result').innerText = `画像の総枚数に対する割合: ${percentage}%`;
-
-    document.getElementById('congratulations-modal').style.display = 'block';
-}
-
-document.body.addEventListener('click', function() {
-    if (document.getElementById('congratulations-modal').style.display === 'block') {
-        document.getElementById('congratulations-modal').style.display = 'none';
-    }
-});
 
 function startAutoKuji() {
     if (autoInterval) {
@@ -95,7 +76,7 @@ function startAutoKuji() {
                     clearInterval(autoInterval);
                     autoInterval = null;
                     updateAutoButtonText(false);
-                    showCongratulations();
+                    window.open('congrats.html', '_blank', 'width=600,height=400');
             }
         }, 500);
         updateAutoButtonText(true);
