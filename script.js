@@ -28,7 +28,6 @@ setInterval(changeBackgroundImage, 1500);
 
 // 画像のファイル名をkuji00001.jpgからkuji00367.jpgまで配列に格納
 const kujiImages = Array.from({ length: 367 }, (_, i) => `url("kuji_images/kuji${String(i + 1).padStart(5, '0')}.jpg")`);
-
 let kujiImagesLoaded = [];
 
 // くじ画像のプリロード
@@ -40,24 +39,27 @@ kujiImages.forEach(imageUrl => {
     };
 });
 
+let switchCount = 0; // 画像切り替え回数を保存する変数
+
+function increaseCount() {
+    switchCount++;
+    document.getElementById("count-display").innerText = switchCount;
+}
+
 function changeKujiImage() {
     const imageDisplayElement = document.getElementById('image-display');
-
-    // プリロードされたくじ画像がある場合のみ、画像を変更
     if (kujiImagesLoaded.length > 0) {
         const randomIndex = Math.floor(Math.random() * kujiImagesLoaded.length);
         imageDisplayElement.style.backgroundImage = kujiImagesLoaded[randomIndex];
     }
+    increaseCount(); // 画像が変わるたびにカウントアップ
 }
 
-// ボタンがクリックされたときにchangeKujiImage関数を実行
 document.getElementById('manual-button').addEventListener('click', changeKujiImage);
 
 let autoInterval = null;
 
 document.getElementById("auto-button").addEventListener("click", startAutoKuji);
-
-let switchCount = 0; // 画像切り替え回数を保存する変数
 
 function displayRandomKujiImage() {
     const imageDisplayElement = document.getElementById('image-display');
@@ -65,9 +67,7 @@ function displayRandomKujiImage() {
         const randomIndex = Math.floor(Math.random() * kujiImagesLoaded.length);
         imageDisplayElement.style.backgroundImage = kujiImagesLoaded[randomIndex];
     }
-    // おみくじ画像が切り替わったらカウントを増やす
-    switchCount++;
-    document.getElementById("count-display").innerText = switchCount;
+    increaseCount(); // 画像が変わるたびにカウントアップ
 }
 
 function updateAutoButtonText(isRunning) {
@@ -81,9 +81,9 @@ function updateAutoButtonText(isRunning) {
 
 function startAutoKuji() {
     if (autoInterval) {
-        clearInterval(autoInterval);  // If already running, stop it
+        clearInterval(autoInterval);
         autoInterval = null;
-        updateAutoButtonText(false);  // Update button text to initial state
+        updateAutoButtonText(false);
     } else {
         autoInterval = setInterval(() => {
             displayRandomKujiImage();
@@ -95,9 +95,9 @@ function startAutoKuji() {
                 imageUrl.includes("kuji00005.jpg")) {
                     clearInterval(autoInterval);
                     autoInterval = null;
-                    updateAutoButtonText(false);  // Update button text to initial state
+                    updateAutoButtonText(false);
             }
-        }, 500);  // Change every 500ms
-        updateAutoButtonText(true);  // Update button text to indicate it's running
+        }, 500);
+        updateAutoButtonText(true);
     }
 }
