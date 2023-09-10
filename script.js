@@ -1,4 +1,3 @@
-let currentImageIndex = 0;
 let imagesLoaded = [];
 
 // 画像のファイル名を00001.jpgから00288.jpgまで配列に格納
@@ -15,67 +14,51 @@ images.forEach(imageUrl => {
 
 function changeBackgroundImage() {
     const mainElement = document.querySelector('main');
-
-    // プリロードされた画像がある場合のみ、背景画像を変更
     if (imagesLoaded.length > 0) {
         const randomIndex = Math.floor(Math.random() * imagesLoaded.length);
         mainElement.style.backgroundImage = imagesLoaded[randomIndex];
     }
 }
 
-// 1.5秒毎にchangeBackgroundImage関数を実行
 setInterval(changeBackgroundImage, 1500);
 
-// 画像のファイル名をkuji00001.jpgからkuji00367.jpgまで配列に格納
 const kujiImages = Array.from({ length: 367 }, (_, i) => `url("kuji_images/kuji${String(i + 1).padStart(5, '0')}.jpg")`);
 let kujiImagesLoaded = [];
 
-// くじ画像のプリロード
 kujiImages.forEach(imageUrl => {
     const img = new Image();
-    img.src = imageUrl.substring(5, imageUrl.length - 2);  // "url()"を取り除く
+    img.src = imageUrl.substring(5, imageUrl.length - 2);
     img.onload = () => {
         kujiImagesLoaded.push(imageUrl);
     };
 });
 
-let switchCount = 0; // 画像切り替え回数を保存する変数
+let switchCount = 0;
 
 function increaseCount() {
     switchCount++;
     document.getElementById("count-display").innerText = switchCount;
 }
 
-function changeKujiImage() {
-    const imageDisplayElement = document.getElementById('image-display');
-    if (kujiImagesLoaded.length > 0) {
-        const randomIndex = Math.floor(Math.random() * kujiImagesLoaded.length);
-        imageDisplayElement.style.backgroundImage = kujiImagesLoaded[randomIndex];
-    }
-    increaseCount(); // 画像が変わるたびにカウントアップ
-}
-
-document.getElementById('manual-button').addEventListener('click', changeKujiImage);
-
-let autoInterval = null;
-
-document.getElementById("auto-button").addEventListener("click", startAutoKuji);
-
 function displayRandomKujiImage() {
     const imageDisplayElement = document.getElementById('image-display');
     if (kujiImagesLoaded.length > 0) {
         const randomIndex = Math.floor(Math.random() * kujiImagesLoaded.length);
         imageDisplayElement.style.backgroundImage = kujiImagesLoaded[randomIndex];
+        increaseCount();
     }
-    increaseCount(); // 画像が変わるたびにカウントアップ
 }
+
+document.getElementById('manual-button').addEventListener('click', displayRandomKujiImage);
+
+let autoInterval = null;
 
 function updateAutoButtonText(isRunning) {
     const autoButton = document.getElementById("auto-button");
     if (isRunning) {
-        autoButton.innerHTML = "一時停止<br>"; // 画像が動作しているときのテキスト
+        autoButton.innerHTML = "一時停止<br>";
     } else {
-        autoButton.innerHTML = "オススメ！<br>自動 de<br>おみくじ"; // 画像が停止しているときの初期テキスト
+        autoButton.innerHTML = "オススメ！<br>自動 de<br>おみくじ";
     }
 }
 
@@ -101,3 +84,5 @@ function startAutoKuji() {
         updateAutoButtonText(true);
     }
 }
+
+document.getElementById("auto-button").addEventListener("click", startAutoKuji);
