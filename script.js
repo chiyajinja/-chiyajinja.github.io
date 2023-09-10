@@ -1,9 +1,7 @@
 let imagesLoaded = [];
 
-// 画像のファイル名を00001.jpgから00288.jpgまで配列に格納
 const images = Array.from({ length: 288 }, (_, i) => `url("background_images/00${String(i + 1).padStart(3, '0')}.jpg")`);
 
-// 画像のプリロード
 images.forEach(imageUrl => {
     const img = new Image();
     img.src = imageUrl.substring(5, imageUrl.length - 2);  // "url()"を取り除く
@@ -62,6 +60,24 @@ function updateAutoButtonText(isRunning) {
     }
 }
 
+function showCongratulations() {
+    const imageUrl = document.getElementById('image-display').style.backgroundImage;
+    document.getElementById('kuji-result').style.backgroundImage = imageUrl;
+
+    document.getElementById('switch-count-result').innerText = `切り替わった画面の回数: ${switchCount}回`;
+
+    const percentage = ((switchCount / kujiImages.length) * 100).toFixed(2);
+    document.getElementById('percentage-result').innerText = `画像の総枚数に対する割合: ${percentage}%`;
+
+    document.getElementById('congratulations-modal').style.display = 'block';
+}
+
+document.body.addEventListener('click', function() {
+    if (document.getElementById('congratulations-modal').style.display === 'block') {
+        document.getElementById('congratulations-modal').style.display = 'none';
+    }
+});
+
 function startAutoKuji() {
     if (autoInterval) {
         clearInterval(autoInterval);
@@ -79,6 +95,7 @@ function startAutoKuji() {
                     clearInterval(autoInterval);
                     autoInterval = null;
                     updateAutoButtonText(false);
+                    showCongratulations();
             }
         }, 500);
         updateAutoButtonText(true);
