@@ -84,7 +84,7 @@ function resetCounter() {
 
 document.getElementById('manual-button').addEventListener('click', function() {
     changeKujiImage();  // まずおみくじ画像を変更
-    resetCounter();     // その後、カウンターをリセット
+    // resetCounter();     // その後、カウンターをリセット
 });
 
 // startAutoKuji関数の中のリセット処理を変更
