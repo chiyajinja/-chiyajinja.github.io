@@ -47,7 +47,6 @@ function displayRandomKujiImage() {
     }
 }
 
-
 document.getElementById('manual-button').addEventListener('click', displayRandomKujiImage);
 
 let autoInterval = null;
@@ -102,3 +101,5 @@ function startAutoKuji() {
         updateAutoButtonText(true);
     }
 }
+
+document.getElementById("auto-button").addEventListener("click", startAutoKuji);
