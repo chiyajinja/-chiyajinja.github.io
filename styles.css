@@ -122,3 +122,33 @@ button {
   font-size: 8px; /* 8ピクセルに設定 */
   padding: 20px; /* 上下左右すべてに20pxの余白を追加 */
 }
+
+#congratulations-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 300px; /* 任意で調整してください */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#retry-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF8888; /* 背景色（任意で変更可能） */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#retry-button:hover {
+    background-color: #FF6666; /* ホバー時の背景色（任意で変更可能） */
+}
