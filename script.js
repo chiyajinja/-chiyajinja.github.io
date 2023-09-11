@@ -78,10 +78,10 @@ function showCongratulations() {
     const imageUrl = document.getElementById('image-display').style.backgroundImage;
     document.getElementById('kuji-result').style.backgroundImage = imageUrl;
 
-    document.getElementById('switch-count-result').innerText = `切り替わった画面の回数: ${switchCount}回`;
+    document.getElementById('switch-count-result').innerText = `おみくじを引いた回数: ${switchCount}回`;
 
     const percentage = ((switchCount / kujiImages.length) * 100).toFixed(2);
-    document.getElementById('percentage-result').innerText = `画像の総枚数に対する割合: ${percentage}%`;
+    document.getElementById('percentage-result').innerText = `今回のおみくじ確率: ${percentage}%`;
 
     document.getElementById('congratulations-modal').style.display = 'block';
 }
