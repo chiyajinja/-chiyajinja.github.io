@@ -45,7 +45,7 @@ function displayRandomKujiImage() {
 }
 
 function updateAutoButtonText(isRunning) {
-    document.getElementById("auto-button").innerHTML = isRunning ? "停止" : "オススメ！<br>自動 de<br>おみくじ";
+    document.getElementById("auto-button").innerHTML = isRunning ? "停止" : "お勧め！<br>自動 de<br>おみくじ";
 }
 
 function showCongratulations() {
