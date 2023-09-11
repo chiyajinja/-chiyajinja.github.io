@@ -64,7 +64,10 @@ function displayRandomKujiImage() {
     }
 }
 
-document.getElementById('manual-button').addEventListener('click', displayRandomKujiImage);
+document.getElementById('manual-button').addEventListener('click', function(event) {
+    event.stopPropagation();  // この行を追加
+    displayRandomKujiImage();
+});
 
 let autoInterval = null;
 
