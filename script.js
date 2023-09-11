@@ -46,6 +46,15 @@ function displayRandomKujiImage() {
         increaseCount();
     }
 }
+    const imageUrl = imageDisplayElement.style.backgroundImage;
+    if (imageUrl.includes("kuji00001.jpg") ||
+        imageUrl.includes("kuji00002.jpg") ||
+        imageUrl.includes("kuji00003.jpg") ||
+        imageUrl.includes("kuji00004.jpg") ||
+        imageUrl.includes("kuji00005.jpg")) {
+            showCongratulations();
+    }
+}
 
 document.getElementById('manual-button').addEventListener('click', displayRandomKujiImage);
 
