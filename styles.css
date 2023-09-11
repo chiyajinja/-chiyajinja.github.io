@@ -36,8 +36,8 @@ footer {
 }
 
 footer p, footer a {
-  margin: 10px 0;
-  font-size: 0.9rem;
+  margin: 3px 0;
+  font-size: 0.8rem;
   font-family: 'Arial', sans-serif;
   letter-spacing: 1px;
 }
