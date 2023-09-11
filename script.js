@@ -104,6 +104,16 @@ function showCongratulations() {
 //    }
 //});
 
+document.getElementById('congratulations-modal').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+document.body.addEventListener('click', function() {
+    if (document.getElementById('congratulations-modal').style.display === 'block') {
+        document.getElementById('congratulations-modal').style.display = 'none';
+    }
+});
+
 function startAutoKuji() {
     if (autoInterval) {
         clearInterval(autoInterval);
