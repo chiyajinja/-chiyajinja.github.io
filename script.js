@@ -44,6 +44,9 @@ function checkForSpecialKuji(imageUrl) {
         imageUrl.includes("kuji00003.jpg") ||
         imageUrl.includes("kuji00004.jpg") ||
         imageUrl.includes("kuji00005.jpg")) {
+            
+            console.log("特定のおみくじ画像を検出!"); // このログを追加
+            
             showCongratulations();
     }
 }
