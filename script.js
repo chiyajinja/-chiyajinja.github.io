@@ -98,11 +98,11 @@ function showCongratulations() {
     document.getElementById('congratulations-modal').style.display = 'block';
 }
 
-document.body.addEventListener('click', function() {
-    if (document.getElementById('congratulations-modal').style.display === 'block') {
-        document.getElementById('congratulations-modal').style.display = 'none';
-    }
-});
+// document.body.addEventListener('click', function() {
+//    if (document.getElementById('congratulations-modal').style.display === 'block') {
+//        document.getElementById('congratulations-modal').style.display = 'none';
+//    }
+//});
 
 function startAutoKuji() {
     if (autoInterval) {
