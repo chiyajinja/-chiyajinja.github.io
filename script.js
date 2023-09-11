@@ -71,7 +71,7 @@ let autoInterval = null;
 function updateAutoButtonText(isRunning) {
     const autoButton = document.getElementById("auto-button");
     if (isRunning) {
-        autoButton.innerHTML = "停止<br>";
+        autoButton.innerHTML = "一旦停止<br>";
     } else {
         autoButton.innerHTML = "オススメ！<br>自動 de<br>おみくじ";
     }
@@ -104,6 +104,15 @@ function showCongratulations() {
 //    }
 //});
 
+document.getElementById('congratulations-modal').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+document.body.addEventListener('click', function() {
+    if (document.getElementById('congratulations-modal').style.display === 'block') {
+        document.getElementById('congratulations-modal').style.display = 'none';
+    }
+});
 
 
 function startAutoKuji() {
