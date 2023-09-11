@@ -1,25 +1,3 @@
-let imagesLoaded = [];
-
-const images = Array.from({ length: 288 }, (_, i) => `url("background_images/00${String(i + 1).padStart(3, '0')}.jpg")`);
-
-images.forEach(imageUrl => {
-    const img = new Image();
-    img.src = imageUrl.substring(5, imageUrl.length - 2);
-    img.onload = () => {
-        imagesLoaded.push(imageUrl);
-    };
-});
-
-function changeBackgroundImage() {
-    const mainElement = document.querySelector('main');
-    if (imagesLoaded.length > 0) {
-        const randomIndex = Math.floor(Math.random() * imagesLoaded.length);
-        mainElement.style.backgroundImage = imagesLoaded[randomIndex];
-    }
-}
-
-setInterval(changeBackgroundImage, 1500);
-
 const kujiImages = Array.from({ length: 367 }, (_, i) => `url("kuji_images/kuji${String(i + 1).padStart(5, '0')}.jpg")`);
 let kujiImagesLoaded = [];
 
