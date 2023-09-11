@@ -1,17 +1,4 @@
-let imagesLoaded = [];
-
-const images = Array.from({ length: 288 }, (_, i) => `url("background_images/00${String(i + 1).padStart(3, '0')}.jpg")`);
-
-images.forEach(imageUrl => {
-    const img = new Image();
-    img.src = imageUrl.substring(5, imageUrl.length - 2);
-    img.onload = () => {
-        imagesLoaded.push(imageUrl);
-    };
-});
-
-function changeBackgroundImage() {
-    const mainElementconst imageFolderPath = "background_images";
+const imageFolderPath = "background_images";
 const kujiFolderPath = "kuji_images";
 let imagesLoaded = [];
 let kujiImagesLoaded = [];
@@ -67,11 +54,16 @@ function showCongratulations() {
         autoInterval = null;
         updateAutoButtonText(false);
     }
+
+    // おめでとうモーダルとおみくじボタン関連の表示非表示の調整
+    document.querySelector(".button-container").style.display = "none";
+    document.getElementById('congratulations-modal').style.display = 'block';
+    document.getElementById('retry-button').style.display = 'inline-block';
+    
     document.getElementById('kuji-result').style.backgroundImage = document.getElementById('image-display').style.backgroundImage;
     document.getElementById('switch-count-result').innerText = `おみくじを引いた回数: ${switchCount}回`;
     const percentage = ((switchCount / kujiImages.length) * 100).toFixed(2);
     document.getElementById('percentage-result').innerText = `画像の総枚数に対する割合: ${percentage}%`;
-    document.getElementById('congratulations-modal').style.display = 'block';
 }
 
 function startAutoKuji() {
@@ -87,12 +79,27 @@ function startAutoKuji() {
 
 loadImages(imageFolderPath, 288, 3, imagesLoaded);
 loadImages(kujiFolderPath, 367, 5, kujiImagesLoaded);
+
 setInterval(changeBackgroundImage, 1500);
+
 document.getElementById('manual-button').addEventListener('click', displayRandomKujiImage);
+
 document.getElementById('congratulations-modal').addEventListener('click', e => e.stopPropagation());
+
 document.body.addEventListener('click', () => {
     if (document.getElementById('congratulations-modal').style.display === 'block') {
         document.getElementById('congratulations-modal').style.display = 'none';
     }
 });
+
 document.getElementById("auto-button").addEventListener("click", startAutoKuji);
+
+document.getElementById("retry-button").addEventListener("click", function() {
+    // 画面をリセットする処理
+    document.querySelector(".button-container").style.display = "flex";
+    document.getElementById('congratulations-modal').style.display = 'none';
+    document.getElementById('retry-button').style.display = 'none';
+    document.getElementById("count-display").innerText = "0";
+    switchCount = 0;
+    document.getElementById('image-display').style.backgroundImage = 'none';
+});
