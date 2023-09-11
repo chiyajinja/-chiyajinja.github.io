@@ -4,7 +4,7 @@ const images = Array.from({ length: 288 }, (_, i) => `url("background_images/00$
 
 images.forEach(imageUrl => {
     const img = new Image();
-    img.src = imageUrl.substring(5, imageUrl.length - 2);  // "url()"を取り除く
+    img.src = imageUrl.substring(5, imageUrl.length - 2);
     img.onload = () => {
         imagesLoaded.push(imageUrl);
     };
@@ -38,12 +38,26 @@ function increaseCount() {
     document.getElementById("count-display").innerText = switchCount;
 }
 
+function checkForSpecialKuji(imageUrl) {
+    if (imageUrl.includes("kuji00001.jpg") ||
+        imageUrl.includes("kuji00002.jpg") ||
+        imageUrl.includes("kuji00003.jpg") ||
+        imageUrl.includes("kuji00004.jpg") ||
+        imageUrl.includes("kuji00005.jpg")) {
+            showCongratulations();
+    }
+}
+
 function displayRandomKujiImage() {
     const imageDisplayElement = document.getElementById('image-display');
     if (kujiImagesLoaded.length > 0) {
         const randomIndex = Math.floor(Math.random() * kujiImagesLoaded.length);
-        imageDisplayElement.style.backgroundImage = kujiImagesLoaded[randomIndex];
+        const selectedImageUrl = kujiImagesLoaded[randomIndex];
+        imageDisplayElement.style.backgroundImage = selectedImageUrl;
         increaseCount();
+
+        // ここで特定のおみくじ画像をチェック
+        checkForSpecialKuji(selectedImageUrl);
     }
 }
 
@@ -86,17 +100,6 @@ function startAutoKuji() {
     } else {
         autoInterval = setInterval(() => {
             displayRandomKujiImage();
-            const imageUrl = document.getElementById('image-display').style.backgroundImage;
-            if (imageUrl.includes("kuji00001.jpg") ||
-                imageUrl.includes("kuji00002.jpg") ||
-                imageUrl.includes("kuji00003.jpg") ||
-                imageUrl.includes("kuji00004.jpg") ||
-                imageUrl.includes("kuji00005.jpg")) {
-                    clearInterval(autoInterval);
-                    autoInterval = null;
-                    updateAutoButtonText(false);
-                    showCongratulations();
-            }
         }, 500);
         updateAutoButtonText(true);
     }
