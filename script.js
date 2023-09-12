@@ -16,6 +16,12 @@ function increaseCount() {
     document.getElementById("count-display").innerText = switchCount;
 }
 
+function hideControls() {
+    document.getElementById("manual-button").style.display = "none";
+    document.getElementById("count-display").style.display = "none";
+    document.getElementById("auto-button").style.display = "none";
+}
+
 function checkForSpecialKuji(imageUrl) {
     if (imageUrl.includes("kuji00001.jpg") ||
         imageUrl.includes("kuji00002.jpg") ||
@@ -24,7 +30,7 @@ function checkForSpecialKuji(imageUrl) {
         imageUrl.includes("kuji00005.jpg")) {
             
             console.log("特定のおみくじ画像を検出!"); // このログを追加
-            
+            hideControls();  // この行を追加
             showCongratulations();
     }
 }
@@ -67,7 +73,7 @@ function showCongratulations() {
     }
     
     console.log("showCongratulations関数が呼び出されました"); // このログを追加
-
+ 
     const imageUrl = document.getElementById('image-display').style.backgroundImage;
     document.getElementById('kuji-result').style.backgroundImage = imageUrl;
 
