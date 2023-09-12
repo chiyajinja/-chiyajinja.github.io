@@ -95,7 +95,16 @@ document.getElementById('congratulations-modal').addEventListener('click', funct
         // document.getElementById('congratulations-modal').style.display = 'none';
     // }
 // });
+document.getElementById("retry-button").addEventListener("click", function() {
+    // button-containerを再表示する
+    document.querySelector(".button-container").style.display = "flex";  // 'flex'にして、もとのレイアウトに戻す
 
+    // カウンターを0に戻す
+    document.getElementById("count-display").innerText = "0";
+
+    // おめでとう画面を非表示にする
+    document.getElementById("congratulations-modal").style.display = "none";
+});
 
 function startAutoKuji() {
     if (autoInterval) {
