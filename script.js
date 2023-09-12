@@ -56,7 +56,7 @@ let autoInterval = null;
 function updateAutoButtonText(isRunning) {
     const autoButton = document.getElementById("auto-button");
     if (isRunning) {
-        autoButton.innerHTML = "ちよっと停止<br>";
+        autoButton.innerHTML = "ちょっと<br>停止";
     } else {
         autoButton.innerHTML = "オススメ<br>自動 de<br>おみくじ";
     }
