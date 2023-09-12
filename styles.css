@@ -122,3 +122,22 @@ button {
   font-size: 8px; /* 8ピクセルに設定 */
   padding: 20px; /* 上下左右すべてに20pxの余白を追加 */
 }
+
+#retry-button {
+    width: 150px;
+    height: 20px;
+    font-size: 10px;
+    margin: 20px auto; /* 上下に20pxのマージンを持ち、左右は自動的に中央寄せにするための設定 */
+    display: block;    /* ボタンをブロック要素として中央寄せにするための設定 */
+    cursor: pointer;   /* カーソルをポインタにする */
+    background-color: #efefef; /* ボタンの背景色 */
+    border: 1px solid #ccc; /* ボタンの境界線 */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    text-align: center; /* テキストを中央寄せにする */
+    padding: 5px 10px; /* テキストの周りのスペースを追加 */
+    transition: background-color 0.3s; /* 背景色の変更時のアニメーション */
+}
+
+#retry-button:hover {
+    background-color: #ddd; /* ボタンをマウスオーバーしたときの背景色 */
+}
