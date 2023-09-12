@@ -56,9 +56,9 @@ let autoInterval = null;
 function updateAutoButtonText(isRunning) {
     const autoButton = document.getElementById("auto-button");
     if (isRunning) {
-        autoButton.innerHTML = "一旦停止<br>";
+        autoButton.innerHTML = "停止<br>";
     } else {
-        autoButton.innerHTML = "オススメ！<br>自動 de<br>おみくじ";
+        autoButton.innerHTML = "オススメ<br>自動 de<br>おみくじ";
     }
 }
 
@@ -97,10 +97,13 @@ document.getElementById('congratulations-modal').addEventListener('click', funct
 // });
 document.getElementById("retry-button").addEventListener("click", function() {
     // button-containerを再表示する
-    document.querySelector(".button-container").style.display = "flex";  // 'flex'にして、もとのレイアウトに戻す
+    document.querySelector(".button-container").style.display = "flex"; 
 
     // カウンターを0に戻す
     document.getElementById("count-display").innerText = "0";
+
+    // 画像の変更回数をカウントする変数を0にリセット
+    switchCount = 0;
 
     // おめでとう画面を非表示にする
     document.getElementById("congratulations-modal").style.display = "none";
