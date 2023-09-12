@@ -16,8 +16,6 @@ function increaseCount() {
     document.getElementById("count-display").innerText = switchCount;
 }
 
-document.querySelector(".button-container").style.display = "none";
-
 function checkForSpecialKuji(imageUrl) {
     if (imageUrl.includes("kuji00001.jpg") ||
         imageUrl.includes("kuji00002.jpg") ||
@@ -26,7 +24,7 @@ function checkForSpecialKuji(imageUrl) {
         imageUrl.includes("kuji00005.jpg")) {
             
             console.log("特定のおみくじ画像を検出!"); // このログを追加
-            hideControls();  // この行を追加
+            
             showCongratulations();
     }
 }
@@ -69,20 +67,15 @@ function showCongratulations() {
     }
     
     console.log("showCongratulations関数が呼び出されました"); // このログを追加
- 
+
     const imageUrl = document.getElementById('image-display').style.backgroundImage;
     document.getElementById('kuji-result').style.backgroundImage = imageUrl;
 
     document.getElementById('switch-count-result').innerText = `おみくじを引いた回数: ${switchCount}回`;
 
-    // おみくじの枚数(ここでは5と仮定します。実際の値に変更してください)
-// const specialKujiCount = 5;
-// const percentage = ((specialKujiCount / switchCount) * 100).toFixed(2);
-// document.getElementById('percentage-result').innerText = `おみくじの枚数に対する割合: ${percentage}%`;
-
     const percentage = ((switchCount / kujiImages.length) * 100).toFixed(2);
     document.getElementById('percentage-result').innerText = `画像の総枚数に対する割合: ${percentage}%`;
-    
+
     document.getElementById('congratulations-modal').style.display = 'block';
 }
 
@@ -90,12 +83,11 @@ document.getElementById('congratulations-modal').addEventListener('click', funct
     event.stopPropagation();
 });
 
-// おめでとう画面の外側をクリックすると、おめでとう画面が非表示になる
-// document.body.addEventListener('click', function() {
-    // if (document.getElementById('congratulations-modal').style.display === 'block') {
-        // document.getElementById('congratulations-modal').style.display = 'none';
-    // }
-// });
+document.body.addEventListener('click', function() {
+    if (document.getElementById('congratulations-modal').style.display === 'block') {
+        document.getElementById('congratulations-modal').style.display = 'none';
+    }
+});
 
 
 function startAutoKuji() {
