@@ -149,7 +149,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px; /* 画面の幅に応じて調整可能 */
+    width: 80%; /* 画面の幅に応じて調整可能 */
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* 影を追加する */
