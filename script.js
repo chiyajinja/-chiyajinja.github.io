@@ -56,7 +56,7 @@ let autoInterval = null;
 function updateAutoButtonText(isRunning) {
     const autoButton = document.getElementById("auto-button");
     if (isRunning) {
-        autoButton.innerHTML = "一旦停止<br>";
+        autoButton.innerHTML = "停止<br>";
     } else {
         autoButton.innerHTML = "オススメ！<br>自動 de<br>おみくじ";
     }
@@ -77,8 +77,10 @@ function showCongratulations() {
 
     document.getElementById('switch-count-result').innerText = `おみくじを引いた回数: ${switchCount}回`;
 
-    const percentage = ((switchCount / kujiImages.length) * 100).toFixed(2);
-    document.getElementById('percentage-result').innerText = `画像の総枚数に対する割合: ${percentage}%`;
+    // おみくじの枚数(ここでは5と仮定します。実際の値に変更してください)
+    const specialKujiCount = 5;
+    const percentage = ((specialKujiCount / switchCount) * 100).toFixed(2);
+    document.getElementById('percentage-result').innerText = `おみくじの枚数に対する割合: ${percentage}%`;
 
     document.getElementById('congratulations-modal').style.display = 'block';
 }
