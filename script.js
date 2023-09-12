@@ -75,9 +75,10 @@ function showCongratulations() {
 
     document.getElementById('switch-count-result').innerText = `おみくじを引いた回数: ${switchCount}回`;
 
-    const percentage = ((switchCount / kujiImages.length) * 100).toFixed(2);
-    document.getElementById('percentage-result').innerText = `今回のおみくじ確率: ${percentage}%`;
-
+    // おみくじの枚数(ここでは5と仮定します。実際の値に変更してください)
+const specialKujiCount = 5;
+const percentage = ((specialKujiCount / switchCount) * 100).toFixed(2);
+document.getElementById('percentage-result').innerText = `おみくじの枚数に対する割合: ${percentage}%`;
     document.getElementById('congratulations-modal').style.display = 'block';
 }
 
