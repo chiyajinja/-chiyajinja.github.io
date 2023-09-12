@@ -89,11 +89,12 @@ document.getElementById('congratulations-modal').addEventListener('click', funct
     event.stopPropagation();
 });
 
-document.body.addEventListener('click', function() {
-    if (document.getElementById('congratulations-modal').style.display === 'block') {
-        document.getElementById('congratulations-modal').style.display = 'none';
-    }
-});
+// おめでとう画面の外側をクリックすると、おめでとう画面が非表示になる
+// document.body.addEventListener('click', function() {
+    // if (document.getElementById('congratulations-modal').style.display === 'block') {
+        // document.getElementById('congratulations-modal').style.display = 'none';
+    // }
+// });
 
 
 function startAutoKuji() {
