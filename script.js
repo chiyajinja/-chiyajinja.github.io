@@ -72,7 +72,7 @@ function showCongratulations() {
     
     console.log("showCongratulations関数が呼び出されました"); // このログを追加
 
-    const imageUrl = document.getElementById('image-display').style.backgroundImage;
+    const imageUrl = // document.getElementById('image-display').style.backgroundImage;
     document.getElementById('kuji-result').style.backgroundImage = imageUrl;
 
     document.getElementById('switch-count-result').innerText = `おみくじを引いた回数: ${switchCount}回`;
