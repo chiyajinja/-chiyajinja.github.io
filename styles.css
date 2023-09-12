@@ -126,18 +126,19 @@ button {
 #retry-button {
     width: 150px;
     height: 20px;
-    font-size: 10px;
-    margin: 20px auto; /* 上下に20pxのマージンを持ち、左右は自動的に中央寄せにするための設定 */
-    display: block;    /* ボタンをブロック要素として中央寄せにするための設定 */
-    cursor: pointer;   /* カーソルをポインタにする */
-    background-color: #efefef; /* ボタンの背景色 */
-    border: 1px solid #ccc; /* ボタンの境界線 */
-    border-radius: 5px; /* ボタンの角を丸くする */
-    text-align: center; /* テキストを中央寄せにする */
-    padding: 5px 10px; /* テキストの周りのスペースを追加 */
-    transition: background-color 0.3s; /* 背景色の変更時のアニメーション */
+    line-height: 20px; /* ここを追加 */
+    font-size: 14px;
+    margin: 20px auto; 
+    display: block;    
+    cursor: pointer;   
+    background-color: #efefef; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    text-align: center; 
+    padding: 0; /* paddingを0に変更して、ボタンの内部のスペースを削除 */
+    transition: background-color 0.3s; 
 }
 
 #retry-button:hover {
-    background-color: #ddd; /* ボタンをマウスオーバーしたときの背景色 */
+    background-color: #ddd;
 }
