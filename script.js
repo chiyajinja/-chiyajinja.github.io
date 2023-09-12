@@ -16,11 +16,7 @@ function increaseCount() {
     document.getElementById("count-display").innerText = switchCount;
 }
 
-function hideControls() {
-    document.getElementById("manual-button").style.display = "none";
-    document.getElementById("count-display").style.display = "none";
-    document.getElementById("auto-button").style.display = "none";
-}
+document.querySelector(".button-container").style.display = "none";
 
 function checkForSpecialKuji(imageUrl) {
     if (imageUrl.includes("kuji00001.jpg") ||
