@@ -34,11 +34,11 @@ function checkForSpecialKuji(imageUrl) {
 }
 
 function displayRandomKujiImage() {
-    const imageDisplayElement = document.getElementById('image-display');
+    const imageElement = document.getElementById('kuji-img');
     if (kujiImagesLoaded.length > 0) {
         const randomIndex = Math.floor(Math.random() * kujiImagesLoaded.length);
         const selectedImageUrl = kujiImagesLoaded[randomIndex];
-        imageDisplayElement.style.backgroundImage = selectedImageUrl;
+        imageElement.src = selectedImageUrl.substring(5, selectedImageUrl.length - 2);
         increaseCount();
 
         // ここで特定のおみくじ画像をチェック
