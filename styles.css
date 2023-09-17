@@ -74,11 +74,13 @@ main {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 2;
 }
 
 #image-display img {
     width: 355px;
     height: 355px;
+    z-index: 1;
     object-fit: cover; /* このプロパティは、画像のアスペクト比が異なる場合に、画像がコンテナにフィットするようにします */
 }
 
