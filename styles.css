@@ -76,6 +76,12 @@ main {
     background-repeat: no-repeat;
 }
 
+#image-display img {
+    width: 355px;
+    height: 355px;
+    object-fit: cover; /* このプロパティは、画像のアスペクト比が異なる場合に、画像がコンテナにフィットするようにします */
+}
+
 #change-image-button {
     display: block;
     width: 175px;
