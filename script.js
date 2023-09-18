@@ -20,12 +20,6 @@ function hideControls() {
     document.querySelector(".button-container").style.display = "none";
 }
 
-function playSpecialKujiSound() {
-    const sound = new Audio('se/metronome00001.mp3');
-    sound.volume = 0.5; // ボリュームを50%に設定 (0.0 〜 1.0 の範囲で指定)
-    sound.play();
-}
-
 function checkForSpecialKuji(imageUrl) {
     if (imageUrl.includes("kuji00001.jpg") ||
         imageUrl.includes("kuji00002.jpg") ||
@@ -33,10 +27,9 @@ function checkForSpecialKuji(imageUrl) {
         imageUrl.includes("kuji00004.jpg") ||
         imageUrl.includes("kuji00005.jpg")) {
             
-            console.log("特定のおみくじ画像を検出!");
-            hideControls();
+            console.log("特定のおみくじ画像を検出!"); // このログを追加
+            hideControls();  // この行を追加
             showCongratulations();
-            playSpecialKujiSound();  // ここで効果音を再生
     }
 }
 
@@ -68,7 +61,7 @@ let autoInterval = null;
 function updateAutoButtonText(isRunning) {
     const autoButton = document.getElementById("auto-button");
     if (isRunning) {
-        autoButton.innerHTML = "ストップ";
+        autoButton.innerHTML = "ちょっと<br>とまって";
     } else {
         autoButton.innerHTML = "オススメ<br>自動 de<br>おみくじ";
     }
