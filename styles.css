@@ -189,3 +189,15 @@ button {
     font-size: 16px;
     color: #555;
 }
+
+#payment-button {
+    width: 360px;
+    height: 180px;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.5s ease; /* 画像の切り替え時のアニメーション */
+}
+
+#payment-button:hover {
+    content: url(""img/saisenbox0001b.jpg"");
+}
