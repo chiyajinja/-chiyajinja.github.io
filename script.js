@@ -134,4 +134,16 @@ function startAutoKuji() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    var paymentButton = document.getElementById("payment-button");
+    var images = ["img/saisenbox0001.jpg", "img/saisenbox0001b.jpg"];
+    var currentIndex = 0;
+
+    setInterval(function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        paymentButton.src = images[currentIndex];
+    }, 1000); // 1000ミリ秒（1秒）ごとに画像を切り替える
+});
+
+
 document.getElementById("auto-button").addEventListener("click", startAutoKuji);
