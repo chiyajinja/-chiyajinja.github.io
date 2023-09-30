@@ -134,6 +134,7 @@ function startAutoKuji() {
     }
 }
 
+// 決済ボタンの画像を自動で切り替える
 document.addEventListener("DOMContentLoaded", function() {
     var paymentButton = document.getElementById("payment-button");
     var images = ["img/saisenbox0001.jpg", "img/saisenbox0001b.jpg"];
