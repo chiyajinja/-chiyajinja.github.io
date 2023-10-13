@@ -40,13 +40,26 @@ function checkForSpecialKuji(imageUrl) {
     }
 }
 
+let isCeilingEnabled = false;  // トグルボタンがオフの初期状態を示す
+
+// 新しいトグルボタン用のイベントリスナー
+document.getElementById("toggle-ceiling-input").addEventListener("change", function() {
+    isCeilingEnabled = this.checked;
+    console.log(isCeilingEnabled ? "天井オン" : "天井オフ");  // デバッグ用
+});
+
 function displayRandomKujiImage() {
     const imageElement = document.getElementById('kuji-img');
     if (kujiImagesLoaded.length > 0) {
-        const randomIndex = Math.floor(Math.random() * kujiImagesLoaded.length);
-        const selectedImageUrl = kujiImagesLoaded[randomIndex];
+        let selectedImageUrl;
+        if (isCeilingEnabled && switchCount >= 49) {  // 50回目で天井が有効の場合
+            selectedImageUrl = 'url("kuji_images/kuji00001.jpg")'; // 必要に応じて変更
+        } else {
+            const randomIndex = Math.floor(Math.random() * kujiImagesLoaded.length);
+            selectedImageUrl = kujiImagesLoaded[randomIndex];
+        }
         imageElement.src = selectedImageUrl.substring(5, selectedImageUrl.length - 2);
-        
+
         increaseCount();
 
         // ここで特定のおみくじ画像をチェック
