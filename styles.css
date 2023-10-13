@@ -201,3 +201,74 @@ button {
 #payment-button:hover {
     content: url("img/saisenbox0001b.jpg");
 }
+
+/* スイッチのベーススタイル */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch .toggle-ceiling {
+    display: none; /* チェックボックスを非表示に */
+}
+
+.switch .slider {
+    /* トグルボタンのスタイルをこちらに移動 */
+    /* 例: */
+    width: 50px;
+    height: 25px;
+    background: gray;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.switch .toggle-ceiling:checked + .slider {
+    background: green; /* これはオンのときの背景色としての例です */
+}
+
+.switch .slider::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.3s;
+}
+
+.switch .toggle-ceiling:checked + .slider::before {
+    left: 25px;
+}
+
+/* チェックボックスがチェックされたときのスタイル */
+input:checked + .slider {
+  background-color: #2196F3; /* オンのときの背景色 */
+}
+
+/* 追加: ホバー時のスタイル */
+.switch:hover .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/* トグルボタンの左右表示のスタイル調整 */
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 必要に応じて */
+}
+
+.toggle-label-left, .toggle-label-right {
+    font-size: 14px;       
+    margin: 0 10px;       
+}
+
+.slider {
+    /* 必要に応じてスタイルを追加/調整 */
+}
