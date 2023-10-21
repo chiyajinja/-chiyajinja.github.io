@@ -82,7 +82,7 @@ document.getElementById('manual-button').addEventListener('click', function(even
     displayRandomKujiImage();
 
 // 手動のおみくじボタンのクリックをトラッキング
-    gtag('event', 'click', {
+    gtag('event', 'click Manual Button', {
         'event_category': 'Omikuji',
         'event_label': 'Manual Button Click'
     });
@@ -91,7 +91,7 @@ document.getElementById('manual-button').addEventListener('click', function(even
 
 document.getElementById('auto-button').addEventListener('click', function(event) {
     // 自動のおみくじボタンのクリックをトラッキング
-    gtag('event', 'click', {
+    gtag('event', 'click Auto Button', {
         'event_category': 'Omikuji',
         'event_label': 'Auto Button Click'
     });
@@ -121,7 +121,7 @@ function showCongratulations() {
     console.log("showCongratulations関数が呼び出されました"); // このログを追加
 
     // Google アナリティクスのイベントトラッキング
-    gtag('event', 'view', {
+    gtag('event', 'view Congrats Modal', {
         'event_category': 'Modal',
         'event_label': 'Congrats Modal'
     });
