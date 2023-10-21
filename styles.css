@@ -272,3 +272,35 @@ input:checked + .slider {
 .slider {
     /* 必要に応じてスタイルを追加/調整 */
 }
+
+/* コンテナを中央揃えにするためのスタイル */
+.centered-container {
+    text-align: center; /* テキストとinline要素を中央揃え */
+    width: 100%; /* コンテナの幅を最大に */
+    margin: 0 auto; /*自動マージンで中央配置 */
+   /* display: flex;*//* フレックスボックスとして表示 */
+   /* flex-direction: column;*//* 子要素を縦に並べる */
+   /* align-items: center;*//* 子要素を横方向中央に配置 */
+}
+
+/* input要素のフォントサイズ、表示位置を設定 */
+#special-kuji-number {
+    font-size: 16px;
+    text-align: center; /* 入力欄内の数字を中央揃え */
+}
+
+.omikuji2-link-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF69B4; /* ホットピンク */
+    color: #ffffff; /* ホワイトテキスト */
+    border-radius: 5px; /* 角を丸める */
+    text-decoration: none; /* アンダーラインを削除 */
+    font-weight: bold; /* 太字 */
+    margin-top: 20px; /* 上マージン追加 */
+    transition: background-color 0.3s; /* 色の変更を滑らかに */
+}
+
+.omikuji2-link-button:hover {
+    background-color: #FF1493; /* ディープピンク */
+}
