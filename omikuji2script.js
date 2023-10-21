@@ -1,11 +1,11 @@
-const kujiImages = Array.from({ length: 429 }, (_, i) => `url("kuji_images/kuji${String(i + 1).padStart(5, '0')}.jpg")`);
+const kujiImages = Array.from({ length: 419 }, (_, i) => `url("kuji_images/kuji${String(i + 11).padStart(5, '0')}.jpg")`);
 let kujiImagesLoaded = [];
 
 kujiImages.forEach(imageUrl => {
-    const img = new Image();
+    const img  = new Image();
     img.src = imageUrl.substring(5, imageUrl.length - 2);
-    img.onload = () => {
-        kujiImagesLoaded.push(imageUrl);
+    img.onload = () =>  {
+        kujiImagesLoaded.push(imageUrl); 
     };
 });
 
@@ -139,7 +139,7 @@ function showCongratulations() {
     document.getElementById('switch-count-result').innerText = `イラストにたどり着くまでの回数: ${switchCount}回`;
 
     // おみくじの枚数(ここでは5と仮定します。実際の値に変更してください)
-    const specialKujiCount = 5;
+    const specialKujiCount = 1;
     const percentage = ((specialKujiCount / switchCount) * 100).toFixed(2);
     document.getElementById('percentage-result').innerText = `今回のイラスト出現確率: ${percentage}%`;
 
