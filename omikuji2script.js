@@ -111,7 +111,7 @@ function updateAutoButtonText(isRunning) {
     if (isRunning) {
         autoButton.innerHTML = "停止";
     } else {
-        autoButton.innerHTML = "オススメ<br>自動 de<br>おみくじ";
+        autoButton.innerHTML = "オススメ<br>自動 de<br>いだてん";
     }
 
 }
