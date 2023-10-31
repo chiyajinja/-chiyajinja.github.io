@@ -304,3 +304,8 @@ input:checked + .slider {
 .omikuji2-link-button:hover {
     background-color: #FF1493; /* ディープピンク */
 }
+
+.payment-box {
+    text-align: center; /* テキストとinline要素を中央揃え */
+    /*width: 100%; */ /* コンテナの幅を最大に */
+    margin: 10 auto; /*自動マージンで中央配置 */
