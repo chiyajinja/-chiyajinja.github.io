@@ -129,14 +129,6 @@ function showCongratulations() {
     
     console.log("showCongratulations関数が呼び出されました"); // このログを追加
 
-/* 本ページではこの行を削除（5/6）*/
-    // Google アナリティクスのイベントトラッキング
-    gtag('event', 'イダテンイラスト結果view', {
-        'event_category': 'イダテンイラスト結果',
-        'event_label': 'イダテンイラスト結果view'
-    });
-/* 本ページではこの行を削除（6/6） */
-
     const imageUrl = document.getElementById('image-display').style.backgroundImage;
     // document.getElementById('kuji-result').style.backgroundImage = imageUrl;
 
@@ -148,6 +140,15 @@ function showCongratulations() {
     document.getElementById('percentage-result').innerText = `今回のイラスト出現確率: ${percentage}%`;
 
     document.getElementById('congratulations-modal').style.display = 'block';
+
+    /* 本ページではこの行を削除（5/6）*/
+    // Google アナリティクスのイベントトラッキング
+    gtag('event', 'イダテンイラスト結果view', {
+        'event_category': 'イダテンイラスト結果',
+        'event_label': 'イダテンイラスト結果view'
+    });
+/* 本ページではこの行を削除（6/6） */
+    
 }
 
 document.getElementById('congratulations-modal').addEventListener('click', function(event) {
