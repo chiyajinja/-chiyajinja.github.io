@@ -123,13 +123,13 @@ function showCongratulations() {
     
     console.log("showCongratulations関数が呼び出されました"); // このログを追加
 
-/* 本ページではこの行を削除（5/6）*/
+/* 本ページではこの行を削除（5/6）
     // Google アナリティクスのイベントトラッキング
     gtag('event', 'おみくじ結果ページview', {
         'event_category': 'おみくじ結果',
         'event_label': 'おみくじ結果ページview数'
     });
-/* 本ページではこの行を削除（6/6）*/
+ 本ページではこの行を削除（6/6）*/
 
     const imageUrl = document.getElementById('image-display').style.backgroundImage;
     // document.getElementById('kuji-result').style.backgroundImage = imageUrl;
@@ -142,6 +142,15 @@ function showCongratulations() {
     document.getElementById('percentage-result').innerText = `今回のおみくじ確率: ${percentage}%`;
 
     document.getElementById('congratulations-modal').style.display = 'block';
+
+    /* 本ページではこの行を削除（5/6）*/
+    // Google アナリティクスのイベントトラッキング
+    gtag('event', 'おみくじ結果ページview', {
+        'event_category': 'おみくじ結果',
+        'event_label': 'おみくじ結果ページview数'
+    });
+    /* 本ページではこの行を削除（6/6）*/
+    
 }
 
 document.getElementById('congratulations-modal').addEventListener('click', function(event) {
