@@ -1,4 +1,4 @@
-const kujiImages = Array.from({ length: 434 }, (_, i) => `url("kuji_images/kuji${String(i + 11).padStart(5, '0')}.jpg")`);
+const kujiImages = Array.from({ length: 434 }, (_, i) => `url("kuji_images/kuji${String(i + 6).padStart(5, '0')}.jpg")`);
 let kujiImagesLoaded = [];
 
 kujiImages.forEach(imageUrl => {
