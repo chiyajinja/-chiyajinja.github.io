@@ -1,4 +1,4 @@
-const kujiImages = Array.from({ length: 429 }, (_, i) => `url("kuji_images/kuji${String(i + 11).padStart(5, '0')}.jpg")`);
+const kujiImages = Array.from({ length: 434 }, (_, i) => `url("kuji_images/kuji${String(i + 11).padStart(5, '0')}.jpg")`);
 let kujiImagesLoaded = [];
 
 kujiImages.forEach(imageUrl => {
@@ -87,17 +87,17 @@ document.getElementById('manual-button').addEventListener('click', function(even
     event.stopPropagation();  // この行を追加
     displayRandomKujiImage();
 
-/* 本ページではこの行を削除（1/6）*/
+/* 本ページではこの行をコメントアウト（1/6）*/
 // 手動のおみくじボタンのクリックをトラッキング
     gtag('event', 'イダテンイラスト手動ボタンclick', {
         'event_category': 'イダテンイラストページ',
         'event_label': 'イラスト手動ボタン Click'
     });
-/* 本ページではこの行を削除（2/6） */
+/*本ページではこの行をコメントアウト（2/6） */
 });
 
 
-/* 本ページではこの行を削除（3/6）*/
+/* 本ページではこの行をコメントアウト（3/6）*/
 document.getElementById('auto-button').addEventListener('click', function(event) {
     // 自動のおみくじボタンのクリックをトラッキング
     gtag('event', 'イダテンイラスト自動ボタンclick', {
@@ -105,7 +105,7 @@ document.getElementById('auto-button').addEventListener('click', function(event)
         'event_label': 'イラスト自動ボタン Click'
     });
 });
-/* 本ページではこの行を削除（4/6） */
+/*本ページではこの行をコメントアウト（4/6） */
 
 let autoInterval = null;
 
@@ -141,14 +141,14 @@ function showCongratulations() {
 
     document.getElementById('congratulations-modal').style.display = 'block';
 
-    /* 本ページではこの行を削除（5/6）*/
+/* 本ページではこの行をコメントアウト（5/6）*/
     // Google アナリティクスのイベントトラッキング
     gtag('event', 'イダテンイラスト結果view', {
         'event_category': 'イダテンイラスト結果',
         'event_label': 'イダテンイラスト結果view'
     });
-/* 本ページではこの行を削除（6/6） */
-    
+/*本ページではこの行をコメントアウト（6/6） */
+
 }
 
 document.getElementById('congratulations-modal').addEventListener('click', function(event) {
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(function() {
         currentIndex = (currentIndex + 1) % images.length;
         paymentButton.src = images[currentIndex];
-    }, 1000); // 1000ミリ秒（1秒）ごとに画像を切り替える
+    }, 1500); // 1500ミリ秒（1.5秒）ごとに画像を切り替える
 });
 
 
