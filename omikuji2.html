@@ -9,6 +9,7 @@
 </head>
 
 <!-- Google tag (gtag.js) -->
+<!--　アナリティクスのコメントアウトタグ 本ページでは、この行を削除（1/2）
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR24BV8FLL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -17,6 +18,8 @@
 
   gtag('config', 'G-JR24BV8FLL');
 </script>
+アナリティクスのコメントアウトタグ 本ページでは、この行を削除（2/2）  -->
+
 
 <body>
     <header>
@@ -39,17 +42,17 @@
         <!-- イラストNo.を指定 -->
         <div class="centered-container">
             <label for="special-kuji-number">見たいイラスト番号を入れてね🦊:</label>
-            <input type="number" id="special-kuji-number" min="1" max="419" value="11">
+            <input type="number" id="special-kuji-number" min="1" max="434" value="6">
         </div>
         <div class="centered-container">
-            <p>【選べる番号は11〜150です☀️】</p>
+            <p>【選べる番号は6〜150です☀️】</p>
         </div>
         
         <!-- おみくじボタン・カウントエリアの追加 -->
         <div class="button-container">
-            <button id="manual-button">手動 de<br>いだてん</button>
+            <button id="manual-button">手動 de<br>おみくじ</button>
             <div id="count-display">0</div>
-            <button id="auto-button">オススメ<br>自動 de<br>いだてん</button>
+            <button id="auto-button">オススメ<br>自動 de<br>おみくじ</button>
         </div>
         
 　　　　　<!-- おめでとうのモーダル -->
@@ -85,8 +88,8 @@
             let value = parseInt(this.value, 10); // 入力された数字を取得
     
             // 値が10以下の場合、11に修正
-            if (value < 11) {
-                this.value = 11;
+            if (value < 6) {
+                this.value = 6;
             }
             // 値が151以上の場合、150に修正
             else if (value > 150) {
