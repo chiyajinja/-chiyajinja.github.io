@@ -83,9 +83,9 @@ document.getElementById('manual-button').addEventListener('click', function(even
 
 /* 本ページではこの行を削除（1/6）*/
 // 手動のおみくじボタンのクリックをトラッキング
-    gtag('event', 'おみくじ手動click数', {
-        'event_category': 'おみくじページ',
-        'event_label': 'おみくじ手動ボタンClick数'
+    gtag('event', 'いだてんおみくじ手動クリック回数', {
+        'event_category': 'いだてんおみくじ手動クリック回数',
+        'event_label': 'いだてんおみくじ手動クリック回数'
     });
 /* 本ページではこの行を削除（2/6）*/
 });
@@ -94,9 +94,9 @@ document.getElementById('manual-button').addEventListener('click', function(even
 /* 本ページではこの行を削除（3/6）*/
 document.getElementById('auto-button').addEventListener('click', function(event) {
     // 自動のおみくじボタンのクリックをトラッキング
-    gtag('event', 'おみくじ自動click数', {
-        'event_category': 'おみくじページ',
-        'event_label': 'おみくじ自動ボタンClick数'
+    gtag('event', 'いだてんおみくじ自動クリック回数', {
+        'event_category': 'いだてんおみくじ自動クリック回数',
+        'event_label': 'いだてんおみくじ自動クリック回数'
     });
 });
 /* 本ページではこの行を削除（4/6）*/
@@ -139,9 +139,9 @@ function showCongratulations() {
 
 /* 本ページではこの行を削除（5/6）*/
     // Google アナリティクスのイベントトラッキング
-    gtag('event', 'おみくじ結果ページview', {
-        'event_category': 'おみくじ結果',
-        'event_label': 'おみくじ結果ページview数'
+    gtag('event', 'おみくじ結果ページ表示回数', {
+        'event_category': 'おみくじ結果ページ表示回数',
+        'event_label': 'おみくじ結果ページ表示回数'
     });
 /* 本ページではこの行を削除（6/6）*/
     
