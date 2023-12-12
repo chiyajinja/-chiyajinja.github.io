@@ -126,7 +126,7 @@ body, html {
 
 header {
     width: 100%;
-    height: 80px;
+    height: 108px;　/* 元画像が横1397pxにつき、iPhone12miniの縦置きでの横サイズ375pxに、高さをあわせた数値 */
     background-color: #FFDDDD; /* 仮の色です */
     overflow: hidden; /* 画像がheaderの高さを超えた場合にはみ出しを防ぐため */
 
