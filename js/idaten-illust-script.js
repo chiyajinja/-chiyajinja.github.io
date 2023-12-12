@@ -89,9 +89,9 @@ document.getElementById('manual-button').addEventListener('click', function(even
 
 /* 本ページではこの行をコメントアウト（1/6） */
 // 手動のおみくじボタンのクリックをトラッキング
-    gtag('event', 'イダテンイラスト手動ボタンclick', {
-        'event_category': 'イダテンイラストページ',
-        'event_label': 'イラスト手動ボタン Click'
+    gtag('event', 'イダテンイラスト手動ボタンのクリック回数', {
+        'event_category': 'イダテンイラスト手動ボタンのクリック回数',
+        'event_label': 'イダテンイラスト手動ボタンのクリック回数'
     });
 /* 本ページではこの行をコメントアウト（2/6） */
 });
@@ -100,9 +100,9 @@ document.getElementById('manual-button').addEventListener('click', function(even
 /* 本ページではこの行をコメントアウト（3/6） */
 document.getElementById('auto-button').addEventListener('click', function(event) {
     // 自動のおみくじボタンのクリックをトラッキング
-    gtag('event', 'イダテンイラスト自動ボタンclick', {
-        'event_category': 'イダテンイラストページ',
-        'event_label': 'イラスト自動ボタン Click'
+    gtag('event', 'イダテンイラスト自動ボタンのクリック回数', {
+        'event_category': 'イダテンイラスト自動ボタンのクリック回数',
+        'event_label': 'イダテンイラスト自動ボタンのクリック回数'
     });
 });
 /* 本ページではこの行をコメントアウト（4/6） */
@@ -143,9 +143,9 @@ function showCongratulations() {
 
 /* 本ページではこの行をコメントアウト（5/6） */
     // Google アナリティクスのイベントトラッキング
-    gtag('event', 'イダテンイラスト結果view', {
-        'event_category': 'イダテンイラスト結果',
-        'event_label': 'イダテンイラスト結果view'
+    gtag('event', 'イダテンイラスト結果欄の表示回数', {
+        'event_category': 'イダテンイラスト結果欄の表示回数',
+        'event_label': 'イダテンイラスト結果欄の表示回数'
     });
 /* 本ページではこの行をコメントアウト（6/6） */
 
