@@ -523,3 +523,34 @@ input:checked + .slider {
     text-align: center; /* テキストとinline要素を中央揃え */
     /*width: 100%; */ /* コンテナの幅を最大に */
     margin: 10 auto; /*自動マージンで中央配置 */
+
+/* 前記事・次記事リンクの装飾 */
+.article-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.nav-previous a,
+.nav-next a {
+    display: block;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-previous a:hover,
+.nav-next a:hover {
+    background-color: #e2e6ea;
+}
+
+.nav-previous a {
+    text-align: left;
+}
+
+.nav-next a {
+    text-align: right;
+}
