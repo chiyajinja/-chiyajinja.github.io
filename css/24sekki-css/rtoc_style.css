@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/*
+Plugin Name: Mokuji - Rich Table of Content
+Author:
+Author URI:
+Version: 1.1.98
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap");
+
+@keyframes fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
+@keyframes slideFade { 0% { opacity: 0;
+    transform: translateY(10px); }
+  100% { opacity: 1;
+    transform: translateY(0px); } }
+
+#rtoc_shortcode { display: none; margin: 0; padding: 0; }
+
+#rtoc_return { position: relative; z-index: 9999; }
+
+#rtoc_return a { position: fixed; bottom: 70px; right: 16px; width: 58px; height: 58px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16); padding-top: 36px; box-sizing: border-box; background-color: #ccc; border-radius: 50%; color: #fff; font-size: 0.6em; text-align: center; }
+
+#rtoc_return a::before { position: absolute; content: ""; top: 12px; left: 16px; width: 24px; height: 22px; background-repeat: no-repeat; background-position: center top; background-size: 24px 22px; }
+
+#rtoc_return.back_button_left a { right: auto; left: 16px; }
+
+#rtoc_return.back_button_right a { right: 16px; }
+
+.rtoc-mokuji-content { width: 100%; max-width: 700px; font-size: 16px; font-weight: 400; margin: 0 auto 40px; padding: 32px 32px 40px; box-sizing: border-box; }
+
+.rtoc-mokuji-content.rtoc_text_parent { padding-bottom: 56px; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content.rtoc_text_parent { padding-bottom: 32px; } }
+
+.rtoc-mokuji-content.helvetica { font-family: "Helvetica", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, sans-serif; }
+
+.rtoc-mokuji-content.helvetica .mokuji_ol > .rtoc-item::before { font-family: "Helvetica", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, sans-serif; }
+
+.rtoc-mokuji-content.helvetica .decimal_ol > .rtoc-item::before, .rtoc-mokuji-content.helvetica .decimal_ol.level-2 > .rtoc-item::before { font-family: "Helvetica", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, sans-serif; }
+
+.rtoc-mokuji-content.noto-sans { font-family: "Noto Sans JP", sans-serif; }
+
+.rtoc-mokuji-content.noto-sans .mokuji_ol > .rtoc-item::before { font-family: "Noto Sans JP", sans-serif; }
+
+.rtoc-mokuji-content.noto-sans .decimal_ol > .rtoc-item::before, .rtoc-mokuji-content.noto-sans .decimal_ol.level-2 > .rtoc-item::before { font-family: "Noto Sans JP", sans-serif; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content { padding: 32px 32px; } }
+
+@media (min-width: 1024px) { .rtoc-mokuji-content { padding: 40px 64px; } }
+
+.rtoc-mokuji-content #rtoc-mokuji-title { letter-spacing: 0; font-size: 1.35em; line-height: 1.8; }
+
+@media (min-width: 1024px) { .rtoc-mokuji-content #rtoc-mokuji-title { font-size: 1.65em; } }
+
+.rtoc-mokuji-content #rtoc-mokuji-title.rtoc_left { text-align: left; width: calc(100% - 65px); }
+
+.rtoc-mokuji-content #rtoc-mokuji-title.rtoc_left + .rtoc-mokuji.level-1 { margin-top: 0.5em; }
+
+.rtoc-mokuji-content #rtoc-mokuji-title.rtoc_center { text-align: center; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content #rtoc-mokuji-title.rtoc_center { font-size: 1.65em; width: 70%; margin: 0 auto; } }
+
+@media (min-width: 1200px) { .rtoc-mokuji-content #rtoc-mokuji-title.rtoc_center { width: 80%; } }
+
+.rtoc-mokuji-content #rtoc-mokuji-title.rtoc_center + .rtoc-mokuji.level-1 { margin-top: 1.8em; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content #rtoc-mokuji-title.rtoc_center + .rtoc-mokuji.level-1 { margin-top: 1.5em; } }
+
+.rtoc-mokuji-content .rtoc-mokuji { padding: 0; margin: 0; list-style: none; transition: all 0.3s; }
+
+.rtoc-mokuji-content .rtoc-mokuji li { position: relative; line-height: 1.8; margin: 0 !important; line-height: 1.55; }
+
+.rtoc-mokuji-content .rtoc-mokuji li > a { position: relative; color: #707070; text-decoration: none; transition: all 0.3s; display: inline-block; }
+
+.rtoc-mokuji-content .rtoc-mokuji li > a:hover { text-decoration: underline; }
+
+.rtoc-mokuji-content .rtoc-mokuji.level-1 { margin-top: 1.5em; padding-left: 1.3em; padding-top: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important; margin-bottom: 0 !important; border: none !important; }
+
+.rtoc-mokuji-content .rtoc-mokuji.level-1 li { font-size: 0.95em; padding: 16px 0 0 0; list-style: none; }
+
+.rtoc-mokuji-content .rtoc-mokuji.level-1 li span { font-size: 0.95em !important; }
+
+.rtoc-mokuji-content .rtoc-mokuji.level-1 .decimal_ol li::before { top: 5px !important; }
+
+.rtoc-mokuji-content .rtoc-mokuji.level-1 .mokuji_ol.decimal_ol li::before { top: 7px !important; }
+
+.rtoc-mokuji-content .rtoc-mokuji.level-2 { padding-left: 1.1em !important; padding-bottom: 4px !important; padding-top: 4px !important; margin-bottom: 0 !important; }
+
+@media (min-width: 1024px) { .rtoc-mokuji-content .rtoc-mokuji.level-2 { padding-bottom: 1.3em !important; } }
+
+.rtoc-mokuji-content .rtoc-mokuji.level-2 li { font-size: 0.9em; padding-top: 6px; }
+
+.rtoc-mokuji-content .rtoc-mokuji.level-3 { padding-top: 2px; padding-bottom: 8px; padding-left: 1.1em; }
+
+.rtoc-mokuji-content .rtoc-mokuji.level-3 li { font-size: 0.9em; }
+
+.rtoc-mokuji-content .rtoc-mokuji.mokuji_none.level-1 { padding-left: 0px; }
+
+.rtoc-mokuji-content .rtoc-mokuji.mokuji_none.level-1 .mokuji_ul, .rtoc-mokuji-content .rtoc-mokuji.mokuji_none.level-1 .mokuji_ol { padding-left: 2.2em; }
+
+.rtoc-mokuji-content .rtoc-mokuji.mokuji_none.level-1 .mokuji_ul > .rtoc-item::before, .rtoc-mokuji-content .rtoc-mokuji.mokuji_none.level-1 .mokuji_ol > .rtoc-item::before { left: -1.15em; }
+
+.rtoc-mokuji-content .rtoc-mokuji.mokuji_none.level-1 .decimal_ol { padding-left: 2.3em; }
+
+.rtoc-mokuji-content .rtoc-mokuji.mokuji_none.level-1 .mokuji_none.level-2 { padding-left: 1.1em; }
+
+.rtoc-mokuji-content .rtoc-mokuji.mokuji_none.level-1 .mokuji_ol.level-2 .rtoc-item::before { top: 4px !important; }
+
+.rtoc-mokuji-content .rtoc-mokuji.decimal_ol .level-2 { padding-left: 2.4em !important; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content .rtoc-mokuji.decimal_ol .level-2 { padding-left: 2.5em !important; } }
+
+.rtoc-mokuji-content .mokuji_none .mokuji_none.level-2 { padding-left: 1em; }
+
+.rtoc-mokuji-content .mokuji_ol .rtoc-item::after, .rtoc-mokuji-content .mokuji_ul .rtoc-item::after { content: none !important; }
+
+.rtoc-mokuji-content .mokuji_ul > .rtoc-item::before { width: 12px; height: 12px; position: absolute; content: ""; background-color: #082377; border-radius: 50%; top: 21px; left: -1.4em; }
+
+@media (max-width: 767px) { .rtoc-mokuji-content .mokuji_ul > .rtoc-item::before { top: 21px; } }
+
+.rtoc-mokuji-content .mokuji_ul > .rtoc-item::after { content: none !important; }
+
+.rtoc-mokuji-content .mokuji_ul .mokuji_ul .rtoc-item::before { position: absolute; content: ""; background-color: #082377; border-radius: 50%; top: 12px; left: -1.2em; }
+
+@media (max-width: 767px) { .rtoc-mokuji-content .mokuji_ul .mokuji_ul .rtoc-item::before { width: 8px; height: 8px; top: 12px; } }
+
+.rtoc-mokuji-content .mokuji_ul .mokuji_ul .mokuji_none .rtoc-item::before { content: none; }
+
+.rtoc-mokuji-content .mokuji_ul .mokuji_ol > .rtoc-item::before { left: -1.15em; top: 5px !important; }
+
+.rtoc-mokuji-content .rtoc-mokuji .mokuji_ul .rtoc-item::before, .rtoc-mokuji-content .rtoc-mokuji.mokuji_none .mokuji_ul .rtoc-item::before { width: 8px; height: 8px; top: 12px; }
+
+.rtoc-mokuji-content .mokuji_ol { padding-left: 0; counter-reset: rtoc-li; list-style: none; border: none; }
+
+.rtoc-mokuji-content .mokuji_ol > .rtoc-item { position: relative; }
+
+.rtoc-mokuji-content .mokuji_ol > .rtoc-item::before { font-size: 1.1em; counter-increment: rtoc-li; content: counter(rtoc-li) ". "; position: absolute; left: -1.3em; background-color: transparent !important; top: 14px !important; background: transparent; box-shadow: none; font-weight: normal; display: inline-block; width: auto; height: auto; }
+
+.rtoc-mokuji-content .mokuji_ol > .rtoc-item .mokuji_ul > .rtoc-item::before { left: -1.2em; }
+
+.rtoc-mokuji-content .mokuji_ol > .rtoc-item .decimal_ol.level-2 { padding-left: 1.2em; }
+
+.rtoc-mokuji-content .mokuji_ol .mokuji_ol { counter-reset: rtoc-li2; }
+
+.rtoc-mokuji-content .mokuji_ol .mokuji_ol > .rtoc-item::before { font-size: 0.9em; top: 7px !important; counter-increment: rtoc-li2; content: counter(rtoc-li2) ". "; position: absolute; background-color: transparent !important; background: transparent; box-shadow: none; font-weight: normal; display: inline-block; width: auto; height: auto; }
+
+.rtoc-mokuji-content .decimal_ol { padding-left: 0; counter-reset: rtoc-decimal-1; list-style: none; }
+
+.rtoc-mokuji-content .decimal_ol > .rtoc-item { position: relative; counter-increment: rtoc-decimal-1; }
+
+.rtoc-mokuji-content .decimal_ol > .rtoc-item::after { position: absolute; content: "" !important; top: 18px; right: auto; left: 7px; bottom: auto; height: 18px; width: 2px; border-radius: 1px; background-color: #757575; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content .decimal_ol > .rtoc-item::after { top: 19px; } }
+
+.rtoc-mokuji-content .decimal_ol > .rtoc-item::before { content: counter(rtoc-decimal-1, decimal-leading-zero) ""; position: absolute; font-size: 1.1em; left: -1.3em; background-color: transparent !important; top: 15px !important; background: transparent; box-shadow: none; font-weight: normal; display: inline-block; width: auto; height: auto; }
+
+.rtoc-mokuji-content .decimal_ol > .rtoc-item > a { padding-left: 1.35em; }
+
+@media (min-width: 1024px) { .rtoc-mokuji-content .decimal_ol > .rtoc-item > a { padding-left: 1.45em; } }
+
+.rtoc-mokuji-content .decimal_ol .decimal_ol { counter-reset: none; }
+
+.rtoc-mokuji-content .decimal_ol.level-2 > .rtoc-item { counter-increment: rtoc-decimal-2; }
+
+.rtoc-mokuji-content .decimal_ol.level-2 > .rtoc-item::after { width: 1px; height: 14px; top: 10px; left: 0.5em; }
+
+@media (min-width: 1024px) { .rtoc-mokuji-content .decimal_ol.level-2 > .rtoc-item::after { left: 5px; } }
+
+.rtoc-mokuji-content .decimal_ol.level-2 > .rtoc-item::before { content: counter(rtoc-decimal-2, decimal-leading-zero) ""; left: -1.2em; font-weight: normal; box-shadow: none; display: inline; background: transparent; }
+
+.rtoc-mokuji-content .decimal_ol.level-2 > .rtoc-item > a { padding-left: 1.2em; }
+
+.rtoc-mokuji-content .decimal_ol.level-2 .level-3 { padding-left: 2.3em; }
+
+.rtoc-mokuji-content .decimal_ol .mokuji_ul > .rtoc-item::before { left: -1.15em; }
+
+.rtoc-mokuji-content .decimal_ol .mokuji_ol > .rtoc-item::before { left: -1.2em; top: 5px !important; }
+
+.rtoc-mokuji-content.rtoc_close #rtoc-mokuji-title, .rtoc-mokuji-content.rtoc_open #rtoc-mokuji-title { position: relative; }
+
+.rtoc-mokuji-content.rtoc_close #rtoc-mokuji-title .rtoc_open_close, .rtoc-mokuji-content.rtoc_open #rtoc-mokuji-title .rtoc_open_close { position: absolute; text-align: center; border: none; cursor: pointer; line-height: 1; font-size: 11px; color: #707070; background-color: #f2f2f2; top: 50%; left: calc(100% + 25px); transform: translate(-50%, -50%); padding: 8px 12px; box-sizing: content-box; text-decoration: none; }
+
+@media (max-width: 767px) { .rtoc-mokuji-content.rtoc_close #rtoc-mokuji-title .rtoc_open_close, .rtoc-mokuji-content.rtoc_open #rtoc-mokuji-title .rtoc_open_close { padding: 6px 8px; } }
+
+.rtoc-mokuji-content.rtoc_close #rtoc-mokuji-title .rtoc_open_close:focus, .rtoc-mokuji-content.rtoc_open #rtoc-mokuji-title .rtoc_open_close:focus { outline: 0; }
+
+.rtoc-mokuji-content.rtoc_close #rtoc-mokuji-title.rtoc_center .rtoc_open_close, .rtoc-mokuji-content.rtoc_open #rtoc-mokuji-title.rtoc_center .rtoc_open_close { top: 140%; left: 50%; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content.rtoc_close #rtoc-mokuji-title.rtoc_center .rtoc_open_close, .rtoc-mokuji-content.rtoc_open #rtoc-mokuji-title.rtoc_center .rtoc_open_close { top: 50%; left: calc(95% + 50px); } }
+
+@media (min-width: 1024px) { .rtoc-mokuji-content.rtoc_close #rtoc-mokuji-title.rtoc_center .rtoc_open_close, .rtoc-mokuji-content.rtoc_open #rtoc-mokuji-title.rtoc_center .rtoc_open_close { left: calc(95% + 50px); } }
+
+.rtoc-mokuji-content .level-1.is_close { display: none !important; }
+
+.rtoc-mokuji-content.frame2 { width: 100%; position: relative; }
+
+@media (min-width: 1024px) { .rtoc-mokuji-content.frame2 { padding: 48px 64px; } }
+
+.rtoc-mokuji-content.frame2::before { position: absolute; content: ""; border: 4px solid #111; width: 100%; height: 100%; box-sizing: border-box; top: 0; left: 0; opacity: 0.15; }
+
+.rtoc-mokuji-content.frame3 { border-top: 2px solid #707070; border-bottom: 2px solid #707070; }
+
+@media (min-width: 1024px) { .rtoc-mokuji-content.frame3 { width: 70%; margin: 0 auto; } }
+
+.rtoc-mokuji-content.frame4 { border-top: 4px solid #25343e; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+
+.rtoc-mokuji-content.frame5 { border-top: 2px solid #25343e; border-bottom: 2px solid #25343e; position: relative; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content.frame5 { padding: 32px 64px; } }
+
+.rtoc-mokuji-content.frame5::before, .rtoc-mokuji-content.frame5::after { position: absolute; content: ""; top: -10px; height: calc(100% + 20px); width: 2px; border-radius: 1px; background-color: #25343e; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content.frame5::before, .rtoc-mokuji-content.frame5::after { height: calc(100% + 32px); } }
+
+.rtoc-mokuji-content.frame5::before { left: 10px; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content.frame5::before { top: -16px; left: 16px; } }
+
+.rtoc-mokuji-content.frame5::after { right: 10px; }
+
+@media (min-width: 768px) { .rtoc-mokuji-content.frame5::after { top: -16px; right: 16px; } }
+
+.rtoc-mokuji-content.animation-fade { animation: fadeIn 0.5s ease 0.4s; animation-fill-mode: both; }
+
+.rtoc-mokuji-content.animation-slide { animation: slideFade 1.2s ease 0.4s; animation-fill-mode: both; }
+
+div[class^="cta-"] #rtoc-mokuji-wrapper { display: none; }
+
+.widget #rtoc-mokuji-wrapper { border: none; }
+
+.widget #rtoc-mokuji-wrapper::before, .widget #rtoc-mokuji-wrapper::after { border: none; background: transparent; }
+
+.widget #rtoc-mokuji-title { font-size: 1.35em; }
+
+.widget .rtoc-mokuji-content { border: none; box-shadow: none; padding: 0; font-size: 0.9rem; }
+
+.widget .rtoc-mokuji-content::before, .widget .rtoc-mokuji-content::after { border: none; }
+
+.widget .rtoc-mokuji-content.frame3 { width: 100%; }
+
+.widget .rtoc_open_close, .widget .rtoc_open_close { display: none; }
+
+.widget .rtoc-mokuji.level-1 { margin-top: 1em; }
+
+.widget .rtoc-mokuji.level-1 .rtoc-item { padding-top: 5px; }
+
+.widget .rtoc-mokuji.level-1 .rtoc-item::before { font-size: 1em !important; }
+
+.widget .rtoc-mokuji.level-1 a { line-height: 1.35em; }
+
+.widget .rtoc-mokuji.level-2 { padding-bottom: 1em; }
+
+.widget .rtoc-mokuji.level-2 .rtoc-item { padding-top: 3px; }
+
+.widget .rtoc-mokuji.level-2 a { line-height: 1.4em; }
+
+.widget .mokuji_none.level-1 .rtoc-item > a { font-weight: bold; }
+
+.widget .mokuji_none.level-1 .mokuji_ul.level-2 .rtoc-item::before { top: 9px !important; }
+
+.widget .mokuji_none.level-2 .rtoc-item > a { font-weight: normal; }
+
+.widget .mokuji_ul.level-1 .rtoc-item::before { top: 9px; left: -1.2em; }
+
+.widget .mokuji_ul.level-1 .mokuji_ol.level-2 .rtoc-item::before { top: 3px !important; }
+
+.widget .mokuji_ul.level-2 .rtoc-item::before { top: 9px; left: -1.1em; }
+
+.widget .mokuji_ol.level-1 .rtoc-item::before { top: 5px !important; }
+
+.widget .mokuji_ol.level-1 .mokuji_ul.level-2 .rtoc-item::before { top: 9px !important; }
+
+.widget .mokuji_ol.level-1 .mokuji_ol.level-2 .rtoc-item::before { top: 3px !important; }
+
+.widget .mokuji_ol.level-2 .rtoc-item > a { padding-left: 0.3em !important; }
+
+.widget .decimal_ol.level-1 .rtoc-item::before { font-size: 0.9em !important; top: 6px !important; }
+
+.widget .decimal_ol.level-1 .rtoc-item::after { top: 6px !important; }
+
+.widget .decimal_ol.level-1 .rtoc-item > a { padding-left: 1.25em; }
+
+.widget .decimal_ol.level-1 .mokuji_ul.level-2 .rtoc-item::before { top: 9px !important; }
+
+.widget .decimal_ol.level-1 .mokuji_ul.level-2 .rtoc-item > a { padding-left: 0.3em !important; }
+
+.widget .decimal_ol.level-1 .mokuji_none.level-2 { padding-left: 2.3em !important; }
+
+.widget .decimal_ol.level-1 .mokuji_none.level-2 .rtoc-item > a { padding-left: 0em !important; }
+
+.widget .decimal_ol.level-2 .rtoc-item::before { font-size: 0.9em !important; }
+
+.widget .decimal_ol.level-2 .rtoc-item::after { top: 6px !important; }
+/*# sourceMappingURL=rtoc_style.css.map */

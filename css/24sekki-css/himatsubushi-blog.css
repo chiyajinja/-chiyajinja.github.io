@@ -1,0 +1,558 @@
+/* スマートフォンやタブレットなど小さなデバイス向けのスタイル */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+/*  header, footer {　*/
+/*    padding: 0px;　/* 初期値20px */
+/*  }　*/
+  .article-content {
+    font-size: 18px; /* 小さなデバイスでの記事の文字サイズ */
+  }
+  /* その他のスマホ向けスタイリング */
+}
+
+/* デスクトップなど大きなデバイス向けのスタイル */
+@media only screen and (min-width: 601px) {
+  body {
+    font-size: 16px;
+  }
+/*  header, footer {　*/
+/*    padding: 0px;　/* 初期値50px */
+/*  }　*/
+  .article-content {
+    font-size: 16px; /* 大きなデバイスでの記事の文字サイズ */
+  }
+  /* その他のデスクトップ向けスタイリング */
+}
+
+
+/* コンテナのスタイリング */
+.container {
+  display: flex;
+}
+
+/* すべての要素に適用 */
+* {
+  box-sizing: border-box;
+}
+
+/* ブログ記事の表示スペースのスタイリング */
+.article-content {
+  flex: 2; /* 左側のスペースを2の割合で占める */
+  padding: 20px; /* 記事の周りにスペースを追加 */
+}
+
+/* 広告スペースのスタイリング */
+.ad-space {
+  flex: 1; /* 右側のスペースを1の割合で占める */
+  padding: 20px; /* 広告の周りにスペースを追加 */
+  border-left: 1px solid #ccc; /* 左側に境界線を追加 */
+}
+
+/* メディアクエリを使用して、特定のビューポートサイズでのみこのスタイルを適用 */
+@media only screen and (min-width: 601px) {
+  .container {
+    display: flex;
+  }
+
+  .article-content {
+    flex: 2; /* 左側のスペースを2の割合で占める */
+    padding: 20px; /* 記事の周りにスペースを追加 */
+  }
+
+  .ad-space {
+    flex: 1; /* 右側のスペースを1の割合で占める */
+    padding: 20px; /* 広告の周りにスペースを追加 */
+    border-left: 1px solid #ccc; /* 左側に境界線を追加 */
+  }
+}
+
+/* スマートフォンなど小さい画面サイズのためのスタイル */
+@media only screen and (max-width: 600px) {
+  .article-content, .ad-space {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ad-space {
+    display: none; /* 広告スペースを非表示にする */
+  }
+}
+
+/* 記事内のイラスト画像のサイズ調整 */
+img {
+  width: 100%; /* 画像をセクションの幅に合わせる */
+  height: auto; /* 縦横比を保持 */
+  max-width: 600px; /* 最大幅を設定 */
+  display: block; /* ブロックレベル要素として表示 */
+  margin: 10px auto; /* 上下のマージンを追加し中央揃え */
+}
+/* 記事内のイラストの角に丸みをもたせる */
+.rounded-image {
+  border-radius: 10px; /* 角の丸みの大きさ */
+  /* その他のスタイリングが必要な場合はここに追加 */
+}
+
+/* h2タグの左にスカイブルー色の縦線を配置 */
+h2 {
+  position: relative;
+  margin-bottom: 10px; /* h2タグの下のマージンを減らす */
+  padding-left: 20px; /* 線とテキストの間隔 */
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px; /* 線の幅 */
+  background-color: skyblue; /* 線の色 */
+}
+
+/* セクション間の間隔を調整する */
+section {
+  margin-top: 20px; /* 上の間隔 */
+  margin-bottom: 60px; /* 下の間隔 */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #FFDDDD; /* 仮の色です */
+    overflow: hidden; /* 画像がheaderの高さを超えた場合にはみ出しを防ぐため */
+
+     /* ヘッダー画像の配置位置調整 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;  /* 横方向の中央寄せ */
+    align-items: flex-end;    /* 縦方向の下寄せ */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    /*clear: both; /* フロート要素のクリア */
+    /*position: relative; /* フッターの位置を調整 */
+}
+
+/*.container {*/
+/*    display: flex;*/
+    /* 必要に応じて高さやオーバーフローを調整 */
+/*}*/
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer p, footer a {
+  margin: 3px 0;
+  font-size: 0.8rem;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1px;
+}
+
+footer a {
+    font-size: 10px;          /* フォントサイズを小さく調整。適切なサイズに変更可能 */
+    color: #ffa500; /* オレンジ色のリンク */
+    text-decoration: none; /* 下線を消す */
+}
+
+footer a:hover {
+  text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+header img {
+    width: auto;  /* 幅は自動 */
+    height: 100%;  /* 高さを100%に */
+    max-width: 100%;  /* 最大幅を100%に */
+}
+
+/* おみくじ用キャッチコピーのスタイル */
+.catchphrase {
+  font-family: 'Arial', sans-serif; /* お好みのフォントに変更可能 */
+  color: #333; /* テキストの色 */
+  background-color: #f8f8f8; /* 背景色 */
+  text-align: center; /* テキストを中央揃えに */
+  padding: 10px 0; /* 上下のパディング */
+  margin: 20px 0; /* 上下のマージン */
+  border-radius: 5px; /* 角丸効果 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影効果 */
+  transition: background-color 0.3s; /* ホバーエフェクトのための遷移 */
+}
+.catchphrase:hover {
+  background-color: #e2e2e2; /* ホバー時の背景色 */
+}
+
+/* おみくじ表示エリアのスタイル */
+.blog-omikuji, .blog-omikuji main {
+  height: 700px; /* 高さを内容に応じて自動調整 */
+  overflow: hidden; /* スクロールバーを表示しない */
+}
+
+/* タブのスタイル */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+/* アクティブなタブのスタイル */
+.tab button.active {
+  background-color: #4CAF50; /* アクティブなタブの背景色 */
+  color: white; /* アクティブなタブの文字色 */
+}
+
+/* タブのボタンのスタイル */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1px 1px;
+  margin: 0; /* マージンを削除または小さく */
+  transition: 0.3s;
+  font-size: 12px;
+}
+.tablinks {
+  margin-bottom: 50; /* タブボタンの下のマージンを削除 */
+  /* その他のスタイル */
+}
+
+/* タブのコンテンツエリア */
+.tabcontent {
+  display: none;
+  padding: 0px 0px;
+  margin-top: 0; /* タブコンテンツの上のマージンを削除 */
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* おみくじセクションの装飾（上：イラスト背景　下：枠） */
+/*.omikuji-section {
+/*　background-image: url('path/to/your/background-image.jpg'); /* 背景イラストのパス */
+/*　background-size: cover; /* 背景画像をカバーに設定 */
+/*　padding: 5px; /* 内側の余白 */
+/*　border-radius: 10px; /* 角丸効果 */
+/*　box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* 影効果 */
+/*}*/
+/* おみくじセクションの中央揃え */
+/* 全画面サイズに対応する共通スタイル */
+.omikuji-section {
+  width: 360px; /* 幅を360pxに固定 */
+  height: 900px; /* 高さを850pxに固定 */
+  border: 2px solid #4CAF50; /* 枠線 */
+  padding: 5px; /* 内側の余白 */
+  margin: 20px auto; /* 上下のマージンを20px、左右のマージンを自動に設定 */
+  border-radius: 10px; /* 角丸効果 */
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* 影効果 */
+  display: block; /* ブロックレベル要素として表示 */
+}
+/* スマートフォンや小さい画面サイズのためのスタイル */
+@media only screen and (max-width: 600px) {
+  .omikuji-section {
+    width: 100%; /* モバイルデバイスでは幅を100%に設定 */
+    height: auto; /* 高さを内容に応じて自動調整 */
+  }
+}
+/* デスクトップなど大きなデバイス向けのスタイル */
+@media only screen and (min-width: 601px) {
+  .container {
+    justify-content: center; /* コンテナ内の要素を中央揃えに */
+  }
+}
+
+/* おみくじ動作用のCSS */
+#image-display {
+    width: 320px;
+    height: 320px;
+    margin: 10px auto; /* 画像表示枠を中央に配置するためのマージン設定 */
+    margin-bottom: 20px; /* 画像とボタンの間のスペースを確保 */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative;
+}
+
+#image-display img {
+    width: 320px;
+    height: 320px;
+    z-index: -1;
+    object-fit: cover; /* このプロパティは、画像のアスペクト比が異なる場合に、画像がコンテナにフィットするようにします */
+}
+
+/* 以下実験中 */
+#change-image-button {
+    display: block;
+    width: 175px;
+    height: 60px;
+    margin: 20px auto; /* ボタンを中央に配置するためのマージン設定 */
+    background-color: #FFDDDD;
+    border: none;
+    border-radius: 5px; /* ボタンの角を少し丸くする */
+    cursor: pointer; /* ホバー時にカーソルをポインターにする */
+}
+
+button {
+    width: 80px;
+    height: 60px;
+    margin-right: 10px; /* ボタン同士の間隔を確保 */
+}
+
+/* カウント表示のスタイル */
+#count-display {
+    width: 80px;
+    height: 60px;
+    line-height: 60px; /* テキストを中央に配置 */
+    text-align: center; /* テキストを中央に配置 */
+    font-size: 24px;
+    background-color: #FFFFFF; /* 任意の背景色 */
+    border: 1px solid #000000; /* 枠線 */
+    z-index: 1; /* 他の要素より前面に */
+}
+
+/* ボタンの位置を調整 */
+#auto-button, #manual-button {
+    z-index: 2; /* カウント表示より前面に */
+}
+    
+.button-container {
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+    gap: 20px; /* ボタン間の間隔 */
+    width: 100%; /* コンテナの幅を最大にする */
+    align-items: center; /* 垂直方向の中央揃え */
+}
+
+.terms {
+  font-size: 8px; /* 8ピクセルに設定 */
+  padding: 20px; /* 上下左右すべてに20pxの余白を追加 */
+}
+
+#retry-button {
+    width: 150px;
+    height: 20px;
+    line-height: 20px; /* ここを追加 */
+    font-size: 13px;
+    margin: 20px auto; 
+    display: block;    
+    cursor: pointer;   
+    background-color: #efefef; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    text-align: center; 
+    padding: 0; /* paddingを0に変更して、ボタンの内部のスペースを削除 */
+    transition: background-color 0.3s; 
+}
+
+#retry-button:hover {
+    background-color: #ddd;
+}
+
+/* おめでとうモーダル全体のスタイル */
+#congratulations-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* 画面の幅に応じて調整可能 */
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* 影を追加する */
+    background-color: #fff;
+}
+
+/* おめでとうモーダル内の各テキスト要素の共通スタイル */
+#congratulations-modal h2,
+#kuji-result,
+#switch-count-result,
+#percentage-result {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* ヘッダー部分のスタイル調整 */
+#congratulations-modal h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #333;
+}
+
+/* その他の結果表示部分のスタイル調整 */
+#kuji-result,
+#switch-count-result,
+#percentage-result {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #555;
+}
+
+#payment-button {
+    width: 300px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.5s ease; /* 画像の切り替え時のアニメーション */
+}
+
+#payment-button:hover {
+    content: url("../img/saisenbox0001b.jpg");
+}
+
+/* スイッチのベーススタイル */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch .toggle-ceiling {
+    display: none; /* チェックボックスを非表示に */
+}
+
+.switch .slider {
+    /* トグルボタンのスタイルをこちらに移動 */
+    /* 例: */
+    width: 50px;
+    height: 25px;
+    background: gray;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.switch .toggle-ceiling:checked + .slider {
+    background: green; /* これはオンのときの背景色としての例です */
+}
+
+.switch .slider::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.3s;
+}
+
+.switch .toggle-ceiling:checked + .slider::before {
+    left: 25px;
+}
+
+/* チェックボックスがチェックされたときのスタイル */
+input:checked + .slider {
+  background-color: #2196F3; /* オンのときの背景色 */
+}
+
+/* 追加: ホバー時のスタイル */
+.switch:hover .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/* トグルボタンの左右表示のスタイル調整 */
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 必要に応じて */
+}
+
+.toggle-label-left, .toggle-label-right {
+    font-size: 14px;       
+    margin: 0 10px;       
+}
+
+.slider {
+    /* 必要に応じてスタイルを追加/調整 */
+}
+
+/* コンテナを中央揃えにするためのスタイル */
+.centered-container {
+    text-align: center; /* テキストとinline要素を中央揃え */
+    width: 100%; /* コンテナの幅を最大に */
+    margin: 0 auto; /*自動マージンで中央配置 */
+   /* display: flex;*//* フレックスボックスとして表示 */
+   /* flex-direction: column;*//* 子要素を縦に並べる */
+   /* align-items: center;*//* 子要素を横方向中央に配置 */
+}
+
+/* input要素のフォントサイズ、表示位置を設定 */
+#special-kuji-number {
+    font-size: 16px;
+    text-align: center; /* 入力欄内の数字を中央揃え */
+}
+
+.omikuji2-link-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF69B4; /* ホットピンク */
+    color: #ffffff; /* ホワイトテキスト */
+    border-radius: 5px; /* 角を丸める */
+    text-decoration: none; /* アンダーラインを削除 */
+    font-weight: bold; /* 太字 */
+    margin-top: 20px; /* 上マージン追加 */
+    transition: background-color 0.3s; /* 色の変更を滑らかに */
+}
+
+.omikuji2-link-button:hover {
+    background-color: #FF1493; /* ディープピンク */
+}
+
+.payment-box {
+    text-align: center; /* テキストとinline要素を中央揃え */
+    /*width: 100%; */ /* コンテナの幅を最大に */
+    margin: 10 auto; /*自動マージンで中央配置 */
+
+/* 以下が暇つぶしサイトの独自css */
+.site-section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.site-title {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.site-rating,
+.site-time,
+.site-category {
+    font-size: 1em;
+    color: #666;
+}
+
+.site-description {
+    font-size: 1em;
+    color: #333;
+}
+
+.site-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
