@@ -3,48 +3,116 @@
     <!-- トップページ -->
     <url>
         <loc>https://www.chiyajinja.jp/</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- トップページ内の個別ページ -->
     <url>
         <loc>https://www.chiyajinja.jp/index.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2024-01-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/terms.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <lastmod>2023-10-01</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.3</priority>
     </url>
 
     <!-- blogフォルダ -->
     <url>
         <loc>https://www.chiyajinja.jp/blog/</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
     </url>
 
+    <!-- 二十四節気フォルダ -->
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
     <!-- 二十四節気フォルダ内のページ -->
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/daikan-24-sekki-2024.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.6</priority>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
     </url>
-    <!-- 他の二十四節気フォルダ内のページも同様に追加 -->
-
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/keichitsu-24-sekki-2024.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/kokuu-24-sekki-2024.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/risshun-24-sekki-2024.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/seimei-24-sekki-2024.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/shoukan-24-sekki-2024.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/shunbun-24-sekki-2024.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/taisetsu-24-sekki-2023.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/touji-24-sekki-2023.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/usui-24-sekki-2024.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
     <!-- ひまつぶしフォルダ -->
     <url>
+        <loc>https://www.chiyajinja.jp/blog/himatsubusi/</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- ひまつぶしフォルダ内のページ -->
+    <url>
         <loc>https://www.chiyajinja.jp/blog/himatsubusi/himatsubusi-site.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
     </url>
     <!-- 他のひまつぶしフォルダ内のページも同様に追加 -->
 </urlset>
