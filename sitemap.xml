@@ -42,63 +42,64 @@
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/daikan-24-sekki-2024.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/keichitsu-24-sekki-2024.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/kokuu-24-sekki-2024.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/risshun-24-sekki-2024.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/seimei-24-sekki-2024.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/shoukan-24-sekki-2024.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/shunbun-24-sekki-2024.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/taisetsu-24-sekki-2023.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/touji-24-sekki-2023.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/usui-24-sekki-2024.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    
     <!-- ひまつぶしフォルダ -->
     <url>
         <loc>https://www.chiyajinja.jp/blog/himatsubusi/</loc>
@@ -111,7 +112,7 @@
     <url>
         <loc>https://www.chiyajinja.jp/blog/himatsubusi/himatsubusi-site.html</loc>
         <lastmod>2024-01-17</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <!-- 他のひまつぶしフォルダ内のページも同様に追加 -->
