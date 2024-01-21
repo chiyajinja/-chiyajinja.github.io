@@ -1,6 +1,7 @@
 /* 以下、ブログ内おみくじ外枠のスタイル 20240117追加*/
 /* おみくじ用キャッチコピーのスタイル */
 .catchphrase {
+  max-width: 320px; /* 最大幅を320pxに設定 */
   font-family: 'Arial', sans-serif; /* お好みのフォントに変更可能 */
   color: #333; /* テキストの色 */
   background-color: #f8f8f8; /* 背景色 */
@@ -55,8 +56,8 @@
   display: none;
   padding: 0px 0px;
   margin-top: 0; /* タブコンテンツの上のマージンを削除 */
-  border: 1px solid #ccc;
-  border-top: none;
+/*  border: 1px solid #ccc; */
+/*  border-top: none; */
 }
 
 /* おみくじセクションの装飾（上：イラスト背景　下：枠） */
@@ -70,7 +71,7 @@
 /* おみくじセクションの中央揃え */
 /* 全画面サイズに対応する共通スタイル */
 .omikuji-section {
-  width: 360px; /* 幅を360pxに固定 */
+  max-width: 360px; /* 最大幅を360pxに設定 */
   height: 900px; /* 高さを850pxに固定 */
   border: 2px solid #4CAF50; /* 枠線 */
   padding: 5px; /* 内側の余白 */
