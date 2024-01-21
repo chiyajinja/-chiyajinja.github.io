@@ -232,7 +232,7 @@ header img {
   font-size: 12px;
 }
 .tablinks {
-  margin-bottom: 50; /* タブボタンの下のマージンを削除 */
+  margin-bottom: 50px; /* タブボタンの下のマージンを削除 */
   /* その他のスタイル */
 }
 
