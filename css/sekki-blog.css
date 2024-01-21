@@ -196,6 +196,9 @@ header img {
   border-radius: 5px; /* 角丸効果 */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影効果 */
   transition: background-color 0.3s; /* ホバーエフェクトのための遷移 */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .catchphrase:hover {
   background-color: #e2e2e2; /* ホバー時の背景色 */
