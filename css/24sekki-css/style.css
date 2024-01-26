@@ -17133,3 +17133,20 @@ _::-webkit-full-page-media, _:future, :root .profile-title {
 .jin-ifont-arrow-left:before {
   content: "\e933";
 }
+
+/*旅行達人から追加*/
+/* パンくずリストに矢印を追加する */
+#breadcrumb li:after {
+    padding: 0 6px;
+    color: rgba(0, 0, 0, 0.2);
+    font-family: FontAwesome;
+    content: "➢";
+    font-size: 14px;
+}
+
+/* ヘッダーメニューのテキストをホバー時に萌黄色に変更する */
+.desktop-nav li a:hover {
+    text-decoration: none;
+    color: #3A8EBA; /* 萌黄色に変更する */
+}
+/* End 旅行達人から追加*/
