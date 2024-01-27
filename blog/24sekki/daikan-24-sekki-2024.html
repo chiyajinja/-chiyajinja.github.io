@@ -30,17 +30,17 @@
 
 <!-- Google tag (gtag.js) -->
 <!--　search Comsole -->
-<!--
+
         <meta name="google-site-verification" content="VivwkYQGEkAnDZu02m96teGtkoMv9S3ZRxvWs7h17WE" />
 <!-- Google Tag Manager -->
 <!-- グーグルタグマネージャー　body側のスクリプトは、約1100行目に設置済み -->
-<!-- 
+
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-M5Q9DLB3');</script>
--->
+
 <!-- End Google Tag Manager -->
 
 <!-- 下記のスクリプトは、Structured Data（構造化データ）やSchema Markup（スキーママークアップ）として知られるものです。 -->
@@ -1507,225 +1507,11 @@ color:#f6a068;/* アイコン色 */
 color:#f6a068;/* アイコン色 */
 }
 
-/* YES・NO チャート */
-.yn-chart{
-  margin:0 auto 2rem;
-  padding: 2em;
-  max-width: 600px;
-  background:#fff8e3;
-  box-shadow: 0 3px 5px rgba(0,0,0,.07);
-  font-size:0.9rem;
-}
-.yn-chart__add{
-  background: #fdc44f;
-  color:#fff;
-  padding: 0.2em 0.9em !important;
-  margin:0 !important;
-  text-align:center;
-  display:inline-block;
-  line-height: 1.5 !important;
-}
-.yn-chart__title{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding: 0.5em 0 0.3em!important;
-  margin: 0 auto !important;
-  font-size:1.35em !important;
-  font-weight: 600 !important;
-  color:#fdc44f;
-  letter-spacing: 1px !important;
-  line-height:1.5 !important;
-}
-.yn-chart__title:before,.yn-chart__title:after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #fdc44f;
-  display: block;
-}
-.yn-chart__title:before {
-  margin-right: 0.7em;
-}
-.yn-chart__title:after {
-  margin-left: 0.7em;
-}
-.yn-chart__ex{
-  text-align:center;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.yn-chart > div{
-  display:none;
-  padding-top: 100px;
-  margin-top: -100px;
-}
-.yn-chart > div.yn-chart__display{
-  display:block;
-}
-.yn-chart > div > figure{
-  margin:1em 0 2em;
-}
-.yn-chart > div > figure img{
-  display:block;
-}
-.yn-chart > div > p{
-  margin:2em 0 0 !important;
-  padding: 0.8em 1em 0.8em 4.3em !important;
-  background:#fff;
-  position:relative;
-}
-.yn-chart > div > p:before{
-  content: "Q";
-  background: #fdc44f;
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #fff;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 1.1em;
-  min-width: 48px;
-}
-.yn-chart > div ul{
-  margin:2em 0 0 !important;
-  padding:0 !important;
-  list-style:none !important;
-  border:none;
-}
-.yn-chart > div ul li {
-  margin: 0 0 1em 1em!important;
-  padding: 0 !important;
-}
-.yn-chart > div ul li:last-child{
-  margin:0 0 0 1em !important;
-}
-.yn-chart > div ul li a{
-  background: #fff;
-  display: block;
-  padding: 0.8em !important;
-  text-decoration: none;
-  color: #333;
-  box-shadow: 0 3px 5px rgba(0,0,0,.07);
-}
-.yn-chart > div ul li a:hover{
-  box-shadow: inset 2px 2px 0 0 #ee8f81, 2px 2px 0 0 #ee8f81, 2px 0 0 0 #ee8f81, 0 2px 0 0 #ee8f81;
-  transition: 0.1s ease-in-out;
-  opacity:1;
-}
-.yn-chart > div ul li:before{
-  content:unset !important;
-}
-.yn-chart__result{
-  background:#fff;
-  padding:1em;
-}
-.yn-chart__result-title{
-  color: #fdc44f;
-  font-size: 1.1em !important;
-  font-weight:600 !important;
-  padding: 0 !important;
-  margin: 0 0 1em !important;
-  border-bottom: 1px dashed #fdc44f;
-}
-@media screen and (max-width: 560px) {
-  .yn-chart{
-    padding:1.8em 1.3em;
-  }
-  .yn-chart > div > figure {
-    margin: 0.5em 0;
-  }
-  .yn-chart > div > p {
-    margin: 1em 0 0 !important;
-    padding: 0.8em 1em 0.8em 3.3em !important;
-  }
-  .yn-chart > div ul {
-    margin: 1em 0 0 !important;
-  }
-  .yn-chart__title{
-    font-size:1em !important;
-  }
-  .yn-chart__title:before {
-    margin-right:0.3em;
-  }
-  .yn-chart__title:after {
-    margin-left:0.3em;
-  }
-  .yn-chart__ex,.yn-chart__add{
-    font-size:0.9em !important;
-  }
-  .yn-chart > div > p:before{
-    min-width: 30px;
-  }
-}
-/* Twitterシェアボタンなど */
-.p-tw-btn,.p-check-btn{
-  text-align:center;
-  margin:1.5em 5em !important;
-  padding:0 !important;
-}
-.p-tw-btn a,.p-check-btn a{
-  display:block;
-  box-shadow: 0 3px 5px rgba(0,0,0,.15);
-  color:#fff !important;
-  font-weight:600 !important;
-  text-decoration:none !important;
-  padding:0.5em 0;
-  border-radius:30px;
-}
-.p-tw-btn a{
-  background:  #00acee;
-}
-.p-check-btn a{
-  background:#fbc55e;
-}
-.p-tw-btn a:hover,.p-check-btn a:hover{
-  transform: translateY(3px);
-  box-shadow: 0 2px 2px rgba(0,0,0,.22);
-}
-.yn-chart > div > p.p-check-btn{
-  background: none !important;
-  padding: 0 5em !important;
-}
-.yn-chart > div > p.p-check-btn:before{
-  content:unset !important;
-}
-@media screen and (max-width: 800px) {
-  .p-tw-btn,.p-check-btn{
-    margin:1.5em 3em !important;
-  }
-}
-@media screen and (max-width: 560px) {
-  .p-tw-btn,.p-check-btn{
-    margin:1.5em 1em !important;
-  }
-  .yn-chart > div > p.p-check-btn{
-    padding: 0 3em !important;
-  }
-}		
 </style>
 			
 <!--カエレバCSS-->
 <!--アプリーチCSS-->
 
-<!--
-下行は、google Search Consoleを有効にするために重要：正式な所有者であることの確認（更新済み）
-    <meta name="google-site-verification" content="VivwkYQGEkAnDZu02m96teGtkoMv9S3ZRxvWs7h17WE" />
--->
 <!--
 下行は、google adsence のスクリプトを記述
     <・・・・・・・・・・・/>
@@ -1734,10 +1520,10 @@ color:#f6a068;/* アイコン色 */
 <body class="post-template-default single single-post postid-438 single-format-standard" id="nofont-style">
 
 <!-- Google Tag Manager (noscript) -->
-<!-- 
+
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5Q9DLB3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
--->
+
 <!-- End Google Tag Manager (noscript) -->
 
 <div id="wrapper">
