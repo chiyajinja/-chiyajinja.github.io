@@ -111,6 +111,12 @@
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/boushu-24-sekki-2024.html</loc>
+        <lastmod>2024-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
     
     <!-- ひまつぶしフォルダ -->
     <url>
