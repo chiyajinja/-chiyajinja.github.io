@@ -40,48 +40,6 @@
     
     <!-- 二十四節気フォルダ内のページ -->
     <url>
-        <loc>https://www.chiyajinja.jp/blog/24sekki/daikan-24-sekki-2024.html</loc>
-        <lastmod>2024-01-27</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.chiyajinja.jp/blog/24sekki/keichitsu-24-sekki-2024.html</loc>
-        <lastmod>2024-01-27</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.chiyajinja.jp/blog/24sekki/kokuu-24-sekki-2024.html</loc>
-        <lastmod>2024-01-17</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.chiyajinja.jp/blog/24sekki/risshun-24-sekki-2024.html</loc>
-        <lastmod>2024-01-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.chiyajinja.jp/blog/24sekki/seimei-24-sekki-2024.html</loc>
-        <lastmod>2024-01-17</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.chiyajinja.jp/blog/24sekki/shoukan-24-sekki-2024.html</loc>
-        <lastmod>2024-01-17</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.chiyajinja.jp/blog/24sekki/shunbun-24-sekki-2024.html</loc>
-        <lastmod>2024-01-17</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/taisetsu-24-sekki-2023.html</loc>
         <lastmod>2024-01-17</lastmod>
         <changefreq>weekly</changefreq>
@@ -94,7 +52,61 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/shoukan-24-sekki-2024.html</loc>
+        <lastmod>2024-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/daikan-24-sekki-2024.html</loc>
+        <lastmod>2024-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/risshun-24-sekki-2024.html</loc>
+        <lastmod>2024-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.chiyajinja.jp/blog/24sekki/usui-24-sekki-2024.html</loc>
+        <lastmod>2024-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/keichitsu-24-sekki-2024.html</loc>
+        <lastmod>2024-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/shunbun-24-sekki-2024.html</loc>
+        <lastmod>2024-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/seimei-24-sekki-2024.html</loc>
+        <lastmod>2024-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/kokuu-24-sekki-2024.html</loc>
+        <lastmod>2024-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/rikka-24-sekki-2024.html</loc>
+        <lastmod>2024-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.chiyajinja.jp/blog/24sekki/shouman-24-sekki-2024.html</loc>
         <lastmod>2024-01-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
