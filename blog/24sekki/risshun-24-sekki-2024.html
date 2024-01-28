@@ -30,17 +30,17 @@
 
 <!-- Google tag (gtag.js) -->
 <!--　search Comsole -->
-
+<!--
         <meta name="google-site-verification" content="VivwkYQGEkAnDZu02m96teGtkoMv9S3ZRxvWs7h17WE" />
 <!-- Google Tag Manager -->
 <!-- グーグルタグマネージャー　body側のスクリプトは、約1100行目に設置済み -->
-
+<!-- 
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-M5Q9DLB3');</script>
-
+-->
 <!-- End Google Tag Manager -->
 	
 <!-- 下記のスクリプトは、Structured Data（構造化データ）やSchema Markup（スキーママークアップ）として知られるものです。 -->
@@ -1360,7 +1360,43 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
                 border-width: 7px 10px 7px 0;
                 z-index: 3;
             }
+            /* 吹き出し（右側） */
+            .balloon-right .balloon-icon {
+                right: 0; /* 左から右へ変更 */
+            }
+
+            .balloon-right .balloon-serif {
+                float: right; /* 左から右へ変更 */
+                margin: 0 85px 40px 5px; /* マージンを調整 */
+            }
+
+            .balloon-right .balloon-serif .balloon-content {
+                position: relative;
+                line-height: 1.5rem;
+                background: #E4FFCC; /* 元のカラー #efefef*/
+                border-radius: 6px;
+                font-size: .95em;
+                z-index: 2;
+            }
+
+            .balloon-right .balloon-serif:before {
+                right: -9px; /* 左から右へ変更 */
+                border-width: 7px 0 7px 10px; /* 吹き出しの矢印の向きを変更 */
+                border-color: transparent transparent transparent #E4FFCC; /* 吹き出しの矢印の向きを変更 */
+            }
+
+@media (max-width: 767px) { /* スマートフォン用のスタイル */
+  .balloon-serif { /*.balloon-content {　（セリフ部分の高さを可変式にしたいので、一度contentを抜いてみる）*/
+    min-height: 67px; /* スマートフォン用の最小高さ */
+  }
+  .icon-name {
+    top: 85px; /* スマートフォン用の位置調整 */
+  }
+}
+
+            /* End 吹き出し（右側） */
             /* End 吹き出し */
+	
             /* チヤタキ通信ボタン */
             a.btn--yellow {
                 color: #000;
@@ -1404,10 +1440,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 <body class="post-template-default single single-post postid-438 single-format-standard" id="nofont-style">
 
 <!-- Google Tag Manager (noscript) -->
-
+<!-- 
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5Q9DLB3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
+-->
 <!-- End Google Tag Manager (noscript) -->
 
 <div id="wrapper">
@@ -1467,13 +1503,23 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 	　　　　　<div class="cps-post-thumb jin-thumb-original" itemscope itemtype="https://schema.org/ImageObject">
 			<img src="../../img_blog/24sekki/risshun-24-sekki-2024-header.jpg" class="attachment-large_size size-large_size lazyload" alt="二十四節気の一つ、『立春』に花開く梅の花を表現したAIイラストです。" width ="780" height ="520" decoding="async" fetchpriority="high"/><noscript><img src="./../img_blog/24sekki/risshun-24-sekki-2024-header.jpg" class="attachment-large_size size-large_size" alt="二十四節気の一つ、『立春』に花開く梅の花を表現したAIイラストです。" width ="780" height ="520" decoding="async" fetchpriority="high" data-eio="l" /></noscript>
 	          </div>
-<div class="clearfix"></div>
-
 　　　　　　<div class="cps-post-main-box">
 		<div class="cps-post-main jin-h2-icons jin-checkcircleicon-h2   h2-style10 h3-style01 h4-style01 entry-content m-size m-size-sp" itemprop="articleBody">
 
-<div class="clearfix"></div>
-
+                           <!-- 左側にキャラ＋吹き出しセリフ-->
+                                <div class="balloon-box balloon-left balloon-gray balloon-bg-gray clearfix">
+                                    <div class="balloon-icon">
+                                        <img src="../../img_blog/1x1.trans.gif" data-lazy-src="../../img/fukidashi/chiyajinja-chiya-002-160x160.png" decoding="async" loading="lazy" class="alignnone size-thumb-160" alt="チヤ神社-チヤのかわいいアイコン-その2" width="160" height="160" srcset="../../img/fukidashi/chiyajinja-chiya-002-160x160.png 160w, ../../img/fukidashi/chiyajinja-chiya-002-150x150.png 150w" sizes="(max-width: 160px) 100vw, 160px"/>
+                                        <noscript>
+                                        <img decoding="async" loading="lazy" class="alignnone size-thumb-160" src="../../img/fukidashi/chiyajinja-chiya-002-160x160.png" alt="チヤ神社-チヤのかわいいアイコン-その2" width="160" height="160" srcset="../../img/fukidashi/chiyajinja-chiya-002-160x160.png 160w, ../../img/fukidashi/chiyajinja-chiya-002-150x150.png 150w" sizes="(max-width: 160px) 100vw, 160px"/>
+                                        </noscript>
+                                    </div>
+                                    <div class="icon-name">チヤ</div>
+                                    <div class="balloon-serif">
+                                        <div class="balloon-content">春だよ～♬</div>
+                                    </div>
+                                </div>
+                           <!-- End キャラ＋吹き出しセリフ-->
 <!--下行より、目次-->
 <div id="rtoc-mokuji-wrapper" class="rtoc-mokuji-content frame2 preset7 animation-none rtoc_open default" data-id="438">
 		<div id="rtoc-mokuji-title" class="rtoc_left">
@@ -1499,9 +1545,27 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 	width="780" height="520" />
 	<noscript><img decoding="async" class="alignnone size-full" src="../../img_blog/24sekki/risshun-24-sekki-2024-20231216-01.jpg"
 	alt="二十四節気の一つ、『立春』に花開く梅の花を表現したAIイラストです。" width="780" height="520" data-eio="l" /></noscript>
-<p>春の息吹がほのかに感じられる「立春」。この古くから続く節気は、新しい始まりと自然の目覚めを告げる日として、私たちのカレンダーに刻まれています。</p>
-<p>2024年の立春の期間は、2月4日から2月19日までです。</p>
-<p>この記事では、立春が日本の風土や文化にどのように根付いているのか、また、立春に関連する風習や季節の食べ物、健康管理の方法まで、さまざまな角度からその魅力を解き明かしていきます。立春の深い意味を理解することで、私たちは季節の変わり目をより豊かに、そして意識的に楽しむことができるのです。</p>
+        <p>春の息吹がほのかに感じられる「立春」。この古くから続く節気は、新しい始まりと自然の目覚めを告げる日として、私たちのカレンダーに刻まれています。</p>
+
+                           <!-- 右側にキャラ＋吹き出しセリフ-->
+                                <div class="balloon-box balloon-right balloon-gray balloon-bg-gray clearfix">
+                                    <div class="balloon-icon">
+                                        <img src="../../img_blog/1x1.trans.gif" data-lazy-src="../../img/fukidashi/chiyajinja-taki-001-160x160.png" decoding="async" loading="lazy" class="alignnone size-thumb-160" alt="チヤ神社-タキのかわいいアイコン-その1" width="160" height="160" srcset="../../img/fukidashi/chiyajinja-taki-001-160x160.png 160w, ../../img/fukidashi/chiyajinja-taki-001-150x150.png 150w" sizes="(max-width: 160px) 100vw, 160px"/>
+                                        <noscript>
+                                        <img decoding="async" loading="lazy" class="alignnone size-thumb-160" src="../../img/fukidashi/chiyajinja-taki-001-160x160.png" alt="チヤ神社-タキのかわいいアイコン-その1" width="160" height="160" srcset="../../img/fukidashi/chiyajinja-taki-001-160x160.png 160w, ../../img/fukidashi/chiyajinja-taki-001-150x150.png 150w" sizes="(max-width: 160px) 100vw, 160px"/>
+                                        </noscript>
+                                    </div>
+                                    <div class="icon-name">タキ</div>
+                                    <div class="balloon-serif">
+                                       <div class="balloon-content">
+                                           <span class="zebline-maker zebline-color-a">
+                                               2024年の立春の期間は、2月4日から2月19日までです。
+                                           </span>
+                                       </div>
+                                    </div>
+                                </div>
+                           <!-- End キャラ＋吹き出しセリフ-->
+        <p>この記事では、立春が日本の風土や文化にどのように根付いているのか、また、立春に関連する風習や季節の食べ物、健康管理の方法まで、さまざまな角度からその魅力を解き明かしていきます。立春の深い意味を理解することで、私たちは季節の変わり目をより豊かに、そして意識的に楽しむことができるのです。</p>
 
 <h2 id="rtoc-2" >立春（りっしゅん）の歴史とその意義：古来からの教え</h2>
 <img decoding="async" class="alignnone size-full lazyload" src="../../img_blog/24sekki/risshun-24-sekki-2024-20231216-02.jpg"
@@ -1580,7 +1644,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 
 <!--以下5行、開始宣言後の終端なので消しちゃダメ-->			
 		</div>
-　　　　　　</div>　<!--行1739・コンテンツのhタグのスタイルを指定しているようなコンテナ-->
+　　　　　　</div>　<!--行1502・コンテンツのhタグのスタイルを指定しているようなコンテナ-->
 　　　　</article>
 　　　</section>
 　　</main>
@@ -1632,7 +1696,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 　　　　　        <div class="chiyataki-section" style="display: block; margin-left: auto; margin-right: auto;">
                     <iframe id="side-adarea" src="../../apage/side-osaisenbox.html" width="100%" height="250px" style="border: none;" scrolling="no">
                     </iframe>
-                           <!-- キャラ＋吹き出しセリフ-->
+                           <!-- 左側にキャラ＋吹き出しセリフ-->
                                 <div class="balloon-box balloon-left balloon-gray balloon-bg-gray clearfix">
                                     <div class="balloon-icon">
                                         <img src="../../img_blog/1x1.trans.gif" data-lazy-src="../../img/fukidashi/chiyajinja-chiya-009-160x160.png" decoding="async" loading="lazy" class="alignnone size-thumb-160" alt="チヤ神社-チヤのかわいいアイコン-その9" width="160" height="160" srcset="../../img/fukidashi/chiyajinja-chiya-009-160x160.png 160w, ../../img/fukidashi/chiyajinja-chiya-009-150x150.png 150w" sizes="(max-width: 160px) 100vw, 160px"/>
