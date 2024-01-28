@@ -23,24 +23,24 @@
         <meta property="og:image" content="https://www.chiyajinja.jp/img_blog/24sekki/daikan-24-sekki-2024-header.jpg"/>
         <meta name="thumbnail" content="https://www.chiyajinja.jp/img_blog/24sekki/daikan-24-sekki-2024-header.jpg"/>          
         <meta property="article:published_time" content="2024-01-17T03:57:32+00:00"/>
-        <meta property="article:modified_time" content="2024-01-27T15:10:28+00:00"/>
+        <meta property="article:modified_time" content="2024-01-28T11:32:26+00:00"/>
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="二十四節気の『大寒（だいかん）』とは：大寒の読み方と深い意味、過ごし方や旬の食べ物、冬の最寒期を楽しもう | チヤ神社-必ずおもしろいネット遊園地-"/>
         <meta name="twitter:description" content="大寒は「だいかん」と読みます。日本の伝統的な二十四節気の一つで、一年で最も寒い期間を表します。この時期、"/>
 
 <!-- Google tag (gtag.js) -->
 <!--　search Comsole -->
-
+<!--
         <meta name="google-site-verification" content="VivwkYQGEkAnDZu02m96teGtkoMv9S3ZRxvWs7h17WE" />
 <!-- Google Tag Manager -->
 <!-- グーグルタグマネージャー　body側のスクリプトは、約1100行目に設置済み -->
-
+<!-- 
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-M5Q9DLB3');</script>
-
+-->
 <!-- End Google Tag Manager -->
 
 <!-- 下記のスクリプトは、Structured Data（構造化データ）やSchema Markup（スキーママークアップ）として知られるものです。 -->
@@ -48,7 +48,7 @@
 記事の詳細:
 　記事のタイトル・二十四節気の『大寒（だいかん）』とは：大寒の読み方と深い意味、過ごし方や旬の食べ物、冬の最寒期を楽しもう
 　公開日時・2024-01-17T03:57:32+00:00
-　最終更新日時・2024-01-27T15:10:28+00:00
+　最終更新日時・2024-01-28T11:32:26+00:00
 　記事のURL・https://www.chiyajinja.jp/blog/24sekki/daikan-24-sekki-2024.html.html
 　記事のメイン画像のURL・https://www.chiyajinja.jp/img_blog/himatsubushi/himatsubushi-site-header.jpg
 　記事のカテゴリーやセクション（あれば）・「カテゴリー」blog　「セクション」himatsubushi 
@@ -84,7 +84,7 @@
                 "height": 768
               },
               "datePublished": "2024-01-17T03:57:32+00:00",
-              "dateModified": "2024-01-27T15:10:28+00:00",
+              "dateModified": "2024-01-28T11:32:26+00:00",
               "inLanguage": "ja",
               "mainEntityOfPage": {
                 "@id": "https://www.chiyajinja.jp/blog/24sekki/daikan-24-sekki-2024.html#webpage"
@@ -1507,11 +1507,225 @@ color:#f6a068;/* アイコン色 */
 color:#f6a068;/* アイコン色 */
 }
 
+/* YES・NO チャート */
+.yn-chart{
+  margin:0 auto 2rem;
+  padding: 2em;
+  max-width: 600px;
+  background:#fff8e3;
+  box-shadow: 0 3px 5px rgba(0,0,0,.07);
+  font-size:0.9rem;
+}
+.yn-chart__add{
+  background: #fdc44f;
+  color:#fff;
+  padding: 0.2em 0.9em !important;
+  margin:0 !important;
+  text-align:center;
+  display:inline-block;
+  line-height: 1.5 !important;
+}
+.yn-chart__title{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 0.5em 0 0.3em!important;
+  margin: 0 auto !important;
+  font-size:1.35em !important;
+  font-weight: 600 !important;
+  color:#fdc44f;
+  letter-spacing: 1px !important;
+  line-height:1.5 !important;
+}
+.yn-chart__title:before,.yn-chart__title:after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #fdc44f;
+  display: block;
+}
+.yn-chart__title:before {
+  margin-right: 0.7em;
+}
+.yn-chart__title:after {
+  margin-left: 0.7em;
+}
+.yn-chart__ex{
+  text-align:center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.yn-chart > div{
+  display:none;
+  padding-top: 100px;
+  margin-top: -100px;
+}
+.yn-chart > div.yn-chart__display{
+  display:block;
+}
+.yn-chart > div > figure{
+  margin:1em 0 2em;
+}
+.yn-chart > div > figure img{
+  display:block;
+}
+.yn-chart > div > p{
+  margin:2em 0 0 !important;
+  padding: 0.8em 1em 0.8em 4.3em !important;
+  background:#fff;
+  position:relative;
+}
+.yn-chart > div > p:before{
+  content: "Q";
+  background: #fdc44f;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1em;
+  min-width: 48px;
+}
+.yn-chart > div ul{
+  margin:2em 0 0 !important;
+  padding:0 !important;
+  list-style:none !important;
+  border:none;
+}
+.yn-chart > div ul li {
+  margin: 0 0 1em 1em!important;
+  padding: 0 !important;
+}
+.yn-chart > div ul li:last-child{
+  margin:0 0 0 1em !important;
+}
+.yn-chart > div ul li a{
+  background: #fff;
+  display: block;
+  padding: 0.8em !important;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 3px 5px rgba(0,0,0,.07);
+}
+.yn-chart > div ul li a:hover{
+  box-shadow: inset 2px 2px 0 0 #ee8f81, 2px 2px 0 0 #ee8f81, 2px 0 0 0 #ee8f81, 0 2px 0 0 #ee8f81;
+  transition: 0.1s ease-in-out;
+  opacity:1;
+}
+.yn-chart > div ul li:before{
+  content:unset !important;
+}
+.yn-chart__result{
+  background:#fff;
+  padding:1em;
+}
+.yn-chart__result-title{
+  color: #fdc44f;
+  font-size: 1.1em !important;
+  font-weight:600 !important;
+  padding: 0 !important;
+  margin: 0 0 1em !important;
+  border-bottom: 1px dashed #fdc44f;
+}
+@media screen and (max-width: 560px) {
+  .yn-chart{
+    padding:1.8em 1.3em;
+  }
+  .yn-chart > div > figure {
+    margin: 0.5em 0;
+  }
+  .yn-chart > div > p {
+    margin: 1em 0 0 !important;
+    padding: 0.8em 1em 0.8em 3.3em !important;
+  }
+  .yn-chart > div ul {
+    margin: 1em 0 0 !important;
+  }
+  .yn-chart__title{
+    font-size:1em !important;
+  }
+  .yn-chart__title:before {
+    margin-right:0.3em;
+  }
+  .yn-chart__title:after {
+    margin-left:0.3em;
+  }
+  .yn-chart__ex,.yn-chart__add{
+    font-size:0.9em !important;
+  }
+  .yn-chart > div > p:before{
+    min-width: 30px;
+  }
+}
+/* Twitterシェアボタンなど */
+.p-tw-btn,.p-check-btn{
+  text-align:center;
+  margin:1.5em 5em !important;
+  padding:0 !important;
+}
+.p-tw-btn a,.p-check-btn a{
+  display:block;
+  box-shadow: 0 3px 5px rgba(0,0,0,.15);
+  color:#fff !important;
+  font-weight:600 !important;
+  text-decoration:none !important;
+  padding:0.5em 0;
+  border-radius:30px;
+}
+.p-tw-btn a{
+  background:  #00acee;
+}
+.p-check-btn a{
+  background:#fbc55e;
+}
+.p-tw-btn a:hover,.p-check-btn a:hover{
+  transform: translateY(3px);
+  box-shadow: 0 2px 2px rgba(0,0,0,.22);
+}
+.yn-chart > div > p.p-check-btn{
+  background: none !important;
+  padding: 0 5em !important;
+}
+.yn-chart > div > p.p-check-btn:before{
+  content:unset !important;
+}
+@media screen and (max-width: 800px) {
+  .p-tw-btn,.p-check-btn{
+    margin:1.5em 3em !important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .p-tw-btn,.p-check-btn{
+    margin:1.5em 1em !important;
+  }
+  .yn-chart > div > p.p-check-btn{
+    padding: 0 3em !important;
+  }
+}		
 </style>
 			
 <!--カエレバCSS-->
 <!--アプリーチCSS-->
 
+<!--
+下行は、google Search Consoleを有効にするために重要：正式な所有者であることの確認（更新済み）
+    <meta name="google-site-verification" content="VivwkYQGEkAnDZu02m96teGtkoMv9S3ZRxvWs7h17WE" />
+-->
 <!--
 下行は、google adsence のスクリプトを記述
     <・・・・・・・・・・・/>
@@ -1520,10 +1734,10 @@ color:#f6a068;/* アイコン色 */
 <body class="post-template-default single single-post postid-438 single-format-standard" id="nofont-style">
 
 <!-- Google Tag Manager (noscript) -->
-
+<!-- 
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5Q9DLB3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
+-->
 <!-- End Google Tag Manager (noscript) -->
 
 <div id="wrapper">
@@ -1578,7 +1792,7 @@ color:#f6a068;/* アイコン色 */
 								<div class="cps-post-meta vcard">
 									<span class="writer fn" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">チヤ神社</span></span>
 									<span class="cps-post-date-box">
-									　　　　<span class="cps-post-date"><time class="entry-date date published updated" datetime="2024-01-27T15:10:28+00:00"><i class="jic jin-ifont-reload" aria-hidden="true"></i>&nbsp;2024年1月27日</time></span>
+									　　　　<span class="cps-post-date"><time class="entry-date date published updated" datetime="2024-01-28T11:32:26+00:00"><i class="jic jin-ifont-reload" aria-hidden="true"></i>&nbsp;2024年1月28日</time></span>
 									</span>
 								</div>	
 							</header>
@@ -1592,6 +1806,25 @@ color:#f6a068;/* アイコン色 */
 
 <div class="clearfix"></div>
 
+<!--以下６行、キャラ＋青吹き出しセリフ	
+<div class="balloon-box balloon-right balloon-none balloon-bg-blue clearfix">
+　<div class="balloon-icon "><img decoding="async" src="../../img_blog/himatsubushi/himatsubushi-site-fukidasi001.jpg" alt="悩み人" width="80" height="80" data-src="../../img_blog/himatsubushi/himatsubushi-site-fukidasi001.jpg" class="lazyload" data-eio-rwidth="780" data-eio-rheight="624"><noscript><img decoding="async" src="../../img_blog/himatsubushi/himatsubushi-site-fukidasi001.jpg" alt="悩み人" width="80" height="80" data-eio="l"></noscript></div>
+　<div class="icon-name">悩み人</div>
+　<div class="balloon-serif">
+　　<div class="balloon-content">暇つぶしに無料で使える面白いサイトを教えて欲しい</div>
+　</div>
+</div>
+-->
+<!--
+<div class="balloon-box balloon-left balloon-none balloon-bg-yellow clearfix">
+　<div class="balloon-icon "><img decoding="async" src="../../img_blog/himatsubushi/himatsubushi-site-chiya-001.png" alt="チヤ" width="80" height="80" data-src="../../img_blog/himatsubushi/himatsubushi-site-chiya-001.png" class="lazyload" data-eio-rwidth="780" data-eio-rheight="780"><noscript><img decoding="async" src="../../img_blog/himatsubushi/himatsubushi-site-chiya-001.png" alt="キツネ" width="80" height="80" data-eio="l"></noscript></div>
+　<div class="icon-name">チヤ</div>
+　<div class="balloon-serif">
+　　<div class="balloon-content">気になるサイトがあればブックマークしておこう</div>
+　</div>
+</div>
+-->
+
 <!--下行より、目次-->
 <div id="rtoc-mokuji-wrapper" class="rtoc-mokuji-content frame2 preset7 animation-none rtoc_open default" data-id="438">
 		<div id="rtoc-mokuji-title" class="rtoc_left">
@@ -1599,6 +1832,9 @@ color:#f6a068;/* アイコン色 */
 		<span>目次</span>
 		</div>
 	<ol class="rtoc-mokuji decimal_ol level-1">
+<!--　　　<li class="rtoc-item">
+                <!-- <a href="#rtoc-0">暇つぶしに使える面白いサイト11選</a> 
+	　　<ol class="rtoc-mokuji decimal_ol level-2"> -->
 		<li class="rtoc-item"><a href="#rtoc-1">大寒（だいかん）の到来：寒さの頂点を迎える時期</a></li>
 		<li class="rtoc-item"><a href="#rtoc-2">大寒（だいかん）の意味と歴史：最も寒い季節の背景</a></li>
 		<li class="rtoc-item"><a href="#rtoc-3">大寒（だいかん）の風習と行事：伝統を守る現代の取り組み</a></li>
@@ -1606,7 +1842,9 @@ color:#f6a068;/* アイコン色 */
 		<li class="rtoc-item"><a href="#rtoc-5">大寒（だいかん）と健康：冬の厳しい寒さに対抗するウェルネスのコツ</a></li>
 		<li class="rtoc-item"><a href="#rtoc-6">現代における大寒（だいかん）の価値：古い伝統の新しい解釈</a></li>
 		<li class="rtoc-item"><a href="#rtoc-7">最後に：大寒（だいかん）の深い魅力：寒さの中に見る生命力</a></li>
-	</ol>
+	　　</ol>
+<!--　　　</li>
+	</ol> -->
 </div>
 
 <!--下行より、１章メイン本文-->
@@ -1801,30 +2039,30 @@ color:#f6a068;/* アイコン色 */
 </div>
 -->
 <!-- End breadcrumb	-->
-                          <!-- 以下の約20行は、パンくずリスト -->
-                                <nav id="breadcrumb" class="breadcrumb">
-                                    <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-                                    <div class="page-top-footer"><a class="totop"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></div>
-                                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                            <a href="../../" itemprop="item">
-                                                <span itemprop="name">ホーム</span>
-                                            </a>
-                                            <meta itemprop="position" content="1"/>
-                                        </li>
-                                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                            <a href="../../blog/" itemprop="item">
-                                                <span itemprop="name">ブログ</span>
-                                            </a>
-                                            <meta itemprop="position" content="2"/>
-                                        </li>
-                                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                                <span itemprop="name">二十四節気の『大寒（だいかん）』とは：大寒の読み方と深い意味、過ごし方や旬の食べ物、冬の最寒期を楽しもう</span>
-                                            </a>
-                                            <meta itemprop="position" content="3"/>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            <!-- End パンくずリスト -->
+<!-- 以下の約20行は、パンくずリスト -->
+	<nav id="breadcrumb" class="breadcrumb">
+	    <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+	       <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+ 	           <a href="https://www.chiyajinja.jp/" itemprop="item" itemid="https://www.chiyajinja.jp/">
+  	              <span itemprop="name">ホーム</span>
+   	         </a>
+  	          <meta itemprop="position" content="1"/>
+ 	       </li>
+ 	       <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+  	          <a href="https://www.chiyajinja.jp/blog/" itemprop="item" itemid="https://www.chiyajinja.jp/blog/">
+  	              <span itemprop="name">ブログ</span>
+  	          </a>
+  	          <meta itemprop="position" content="2"/>
+  	      </li>
+  	      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+   	         <a href="https://www.chiyajinja.jp/blog/24sekki/daikan-24-sekki-2024.html" itemprop="item" itemid="https://www.chiyajinja.jp/blog/24sekki/daikan-24-sekki-2024.html">
+   	             <span itemprop="name">【二十四節気の『大寒（だいかん）』とは：大寒の読み方と深い意味、過ごし方や旬の食べ物、冬の最寒期を楽しもう</span>
+  	          </a>
+   	         <meta itemprop="position" content="3"/>
+ 	       </li>
+ 	   </ul>
+	</nav>
+<!-- End パンくずリスト -->
 		
 <!--フッター-->		
 <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
@@ -1832,27 +2070,36 @@ color:#f6a068;/* アイコン色 */
 		<!--ここからフッターウィジェット-->	
    <div id="footer-widget-area" class="footer_style2 footer_type1">
      <div id="footer-widget-box">
-<!--フッターウィジェット左列-->
-<!--タキ紹介
+<!--フッターウィジェット左列--><!-- チヤ紹介？
    <div id="footer-widget-left">
-          <div id="pages-2" class="footer-widget widget_pages">
-             <div class="widgettitle ef">タキ画像</div>
+          <div id="categories-2" class="footer-widget widget_categories">
+             <div class="widgettitle ef">カテゴリー</div>
+             <ul>
+                <li class="cat-item cat-item-4"><a href="https://himatsubushi.fun/category/1person/">暇つぶし1人 <span class="count">26</span></a></li>
+                <li class="cat-item cat-item-1"><a href="https://himatsubushi.fun/category/2person/">暇つぶし2人以上 <span class="count">14</span></a></li>
+                <li class="cat-item cat-item-14"><a href="https://himatsubushi.fun/category/app/">暇つぶしアプリ <span class="count">21</span></a></li>
+                <li class="cat-item cat-item-26"><a href="https://himatsubushi.fun/category/area/">暇つぶしエリア <span class="count">15</span></a></li>
+                <li class="cat-item cat-item-11"><a href="https://himatsubushi.fun/category/game/">暇つぶしゲーム <span class="count">6</span></a></li>
+                <li class="cat-item cat-item-8"><a href="https://himatsubushi.fun/category/site/">暇つぶしサイト <span class="count">12</span></a></li>
+             </ul>
           </div>
-          <div id="tag_cloud-2" class="footer-widget widget_tag_cloud">
-            <div class="widgettitle ef">タキ紹介文</div>
-          </div>    
-   </div>
+        </div>
 -->
 <!--フッターウィジェット真ん中列-->
-<!--チヤ紹介
+<!--タキ紹介
     <div id="footer-widget-center">
           <div id="pages-2" class="footer-widget widget_pages">
-             <div class="widgettitle ef">チヤ画像</div>
+             <div class="widgettitle ef">お問い合わせ関連</div>
+             <ul>
+                <li class="page_item page-item-20"><a href="https://himatsubushi.fun/contact/">お問い合わせ</a></li>
+                <li class="page_item page-item-104"><a href="https://himatsubushi.fun/sitemap/">サイトマップ</a></li>
+             </ul>
           </div>
           <div id="tag_cloud-2" class="footer-widget widget_tag_cloud">
-            <div class="widgettitle ef">チヤ紹介文</div>
+            <div class="widgettitle ef">タグでチヤ神社</div>
+            <div class="tagcloud"></div>
           </div>
-    </div>
+        </div>
 -->
 <!--フッターウィジェット右列-->	
         <div id="footer-widget-right">
