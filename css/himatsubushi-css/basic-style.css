@@ -1,0 +1,886 @@
+            /* 吹き出し */
+            .balloon-box {
+                position: relative;
+                overflow: hidden;
+                padding-bottom: 3px;
+            }
+
+            .balloon-left .balloon-icon {
+                left: 0;
+            }
+
+            .balloon-icon {
+                position: absolute;
+                top: 0;
+                overflow: hidden;
+                width: 80px;
+                height: 80px;
+                margin-bottom: 0;
+            }
+
+            .balloon-icon img {
+                width: 80px;
+                height: auto;
+                margin-bottom: 0!important;
+            }
+
+            .icon-name {
+                position: absolute;
+                text-align: center;
+                letter-spacing: 0;
+                line-height: 0.7rem!important;
+                color: #777;
+                top: 85px;
+            }
+
+            .icon-name {
+                width: 80px;
+                top: 85px;
+                font-size: 12px;
+            }
+
+            .balloon-left .balloon-serif .balloon-content {
+                padding: .5rem;
+            }
+
+            @media (min-width: 768px) {
+                .icon-name {
+                    width: 80px;
+                    top: 85px;
+                    font-size: 10px;
+                }
+
+                .balloon-left .balloon-serif .balloon-content {
+                    padding: 1.15rem;
+                }
+
+                .balloon-left .balloon-serif:before {
+                    top: 16px;
+                }
+            }
+
+            .balloon-left .balloon-serif {
+                position: relative;
+                float: left;
+                margin: 0 5px 40px 85px;
+                padding: 0;
+            }
+
+            .balloon-left .balloon-serif .balloon-content {
+                position: relative;
+                line-height: 1.5rem;
+                background: #E4FFCC; /* 元のカラー #efefef*/
+                border-radius: 6px;
+                font-size: .95em;
+                z-index: 2;
+            }
+
+            .balloon-left.balloon-bg-gray .balloon-serif:before, .balloon-left.has-efefef-bgballon .balloon-serif:before {
+                border-color: transparent #E4FFCC transparent transparent;
+            }
+
+            .balloon-left .balloon-serif:before {
+                content: "";
+                position: absolute;
+                left: -9px;
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7px 10px 7px 0;
+                z-index: 3;
+            }
+            /* 吹き出し（右側） */
+            .balloon-right .balloon-icon {
+                right: 0; /* 左から右へ変更 */
+            }
+
+            .balloon-right .balloon-serif {
+                float: right; /* 左から右へ変更 */
+                margin: 0 85px 40px 5px; /* マージンを調整 */
+            }
+
+            .balloon-right .balloon-serif .balloon-content {
+                position: relative;
+                line-height: 1.5rem;
+                background: #E4FFCC; /* 元のカラー #efefef*/
+                border-radius: 6px;
+                font-size: .95em;
+                z-index: 2;
+            }
+
+            .balloon-right .balloon-serif:before {
+                right: -9px; /* 左から右へ変更 */
+                border-width: 7px 0 7px 10px; /* 吹き出しの矢印の向きを変更 */
+                border-color: transparent transparent transparent #E4FFCC; /* 吹き出しの矢印の向きを変更 */
+            }
+
+@media (max-width: 767px) { /* スマートフォン用のスタイル */
+  .balloon-serif { /*.balloon-content {　（セリフ部分の高さを可変式にしたいので、一度contentを抜いてみる）*/
+    min-height: 67px; /* スマートフォン用の最小高さ */
+  }
+  .icon-name {
+    top: 85px; /* スマートフォン用の位置調整 */
+  }
+}
+            /* End 吹き出し（右側） */
+            /* End 吹き出し */
+
+            /* チヤタキ通信ボタン */
+            a.btn--yellow {
+                color: #000;
+                background-color: #fff100;
+                border-bottom: 5px solid #ccc100;
+            }
+
+            a.btn--yellow:hover {
+                margin-top: 3px;
+                color: #000;
+                background: # fff20a;
+                border-bottom: 2px solid #ccc100;
+            }
+
+            .btn {            
+                font-size: 1.0rem;
+                font-weight: 700;
+                line-height: 1.5;
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                padding: 1rem 3rem;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                text-align: center;
+                vertical-align: middle;
+                text-decoration: none;
+                letter-spacing: 0.1em;
+                color: #212529;
+                border-radius: 0.5rem;
+            }
+            /* End チヤタキ通信ボタン */
+
+            /* ポイント */
+            .concept-box1 {
+                border-color: #76cdac!important;
+            }
+
+            .concept-box1:before {
+                content: "\f058\a ポイント"!important;
+                font-family: Font Awesome\ 5 Free;
+                color: #76cdac!important;
+                font-size: 20px;
+                top: -21px;
+                padding: 20px 8px 20px 8px;
+                position: absolute;
+                font-weight: 700;
+                background: #fff;
+                line-height: 0;
+                letter-spacing: 0;
+                margin-left: 10px;
+            }
+
+            .cps-post-main div ul:not([class]), .cps-post-main div ol {
+                margin-bottom: 0;
+            }
+
+            .cps-post-main ul li {
+                position: relative;
+                display: block;
+            }
+
+            .concept-box1 {
+                position: relative;
+                border: 1px solid #eee;
+                border-radius: 4px;
+            }
+
+            .concept-box1 ul {
+                border: solid 0px #e8e8e8;
+                margin-bottom: 0;
+                padding: .5em 1em 1em 2.5em;
+                color: #E75685;
+            }
+
+            .concept-box1 strong {
+                color: #000;
+            }
+
+            /* ヘッダー下画像 */
+            ul.top-banner {
+                width: 1180px;
+                margin: 20px auto;
+            }
+
+            .top-banner {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            .top-banner li {
+                width: calc(100%/2);
+                /*←画像を横に4つ並べる場合*/
+                padding: 0 5px;
+                /*←画像の左右に5pxの余白を入れる場合*/
+                box-sizing: border-box;
+            }
+
+            .top-banner li img {
+                max-width: 100%;
+                /*画像のはみだしを防ぐ*/
+                height: auto;
+                /*画像の縦横比を維持 */
+                border: solid 1px #ccc;
+                /*←画像を1pxのグレーの枠線で囲む指定の場合*/
+            }
+
+            @media (max-width: 768px) {
+                ul.top-banner {
+                    width:100%;
+                    margin: 20px auto;
+                }
+
+                .top-banner li {
+                    width: calc(100%/2);
+                    /*←画像を横に4つ並べる場合*/
+                    padding: 0 2px;
+                    /*←画像の左右に5pxの余白を入れる場合*/
+                    box-sizing: border-box;
+                }
+            }
+
+            /*クレジットカード*/
+            .kaisetsu-box5 form {
+                padding: 20px;
+                background: #fff;
+            }
+
+            .kaisetsu-box5 form>p {
+                margin: 0;
+            }
+
+            .kaisetsu-box5 input[type="submit"] {
+                width: 150px;
+            }
+
+            .wpcf7-spinner {
+                display: none;
+            }
+
+   <!--  下記約150行のスタイルコードは、ヘッダー・フッター・<h2>タグor<h3>タグ・その他の細かい装飾（カラー・主に水色）をつかさどっている様子
+        　つまり、色を水色から暖色系に変えれば、サイトの雰囲気が変わりそうである  -->
+            a {
+/*                color: #95F64F */
+                color: #4f96f6 
+            }
+
+            .main-c, .has-sango-main-color {
+                color: #B5FF6B
+/*                color: #6bb6ff */
+            }
+
+            .main-bc, .has-sango-main-background-color {
+                background-color: #B5FF6B
+/*                background-color: #6bb6ff  */
+            }
+
+            .main-bdr, #inner-content .main-bdr {
+                border-color: #B5FF6B
+/*                border-color: #6bb6ff */
+            }
+
+            .pastel-c, .has-sango-pastel-color {
+                color: #E3FFC8
+/*                color: #c8e4ff */
+            }
+
+            .pastel-bc, .has-sango-pastel-background-color, #inner-content .pastel-bc {
+                background-color: #E3FFC8
+ /*               background-color: #c8e4ff */
+            }
+
+            .accent-c, .has-sango-accent-color {
+                color: #ffb36b
+            }
+
+            .accent-bc, .has-sango-accent-background-color {
+                background-color: #ffb36b
+            }
+
+            .header, #footer-menu, .drawer__title {
+                background-color: #90EE90
+/*   元カラー             background-color: #58a9ef　*/
+            }
+
+            #logo a {
+                color: #FFF
+            }
+
+            .desktop-nav li a , .mobile-nav li a, #footer-menu a, #drawer__open, .header-search__open, .copyright, .drawer__title {
+                color: #FFF
+            }
+
+            .drawer__title .close span, .drawer__title .close span:before {
+                background: #FFF
+            }
+
+            .desktop-nav li:after {
+                background: #FFF
+            }
+
+            .mobile-nav .current-menu-item {
+                border-bottom-color: #FFF
+            }
+
+            .widgettitle, .sidebar .wp-block-group h2, .drawer .wp-block-group h2 {
+                color: #B5FF6B;
+/*                color: #6bb6ff; */
+                background-color: #E3FFC8
+/*                background-color: #c8e4ff */
+            }
+
+            .footer, .footer-block {
+                background-color: #e0e4eb
+            }
+
+            .footer-block, .footer, .footer a, .footer .widget ul li a {
+                color: #3c3c3c
+            }
+
+            #toc_container .toc_title, .entry-content .ez-toc-title-container, #footer_menu .raised, .pagination a, .pagination span, #reply-title:before, .entry-content blockquote:before, .main-c-before li:before, .main-c-b:before {
+                color: #B5FF6B
+/*                color: #6bb6ff */
+            }
+
+            .searchform__submit, .footer-block .wp-block-search .wp-block-search__button, .sidebar .wp-block-search .wp-block-search__button, .footer .wp-block-search .wp-block-search__button, .drawer .wp-block-search .wp-block-search__button, #toc_container .toc_title:before, .ez-toc-title-container:before, .cat-name, .pre_tag > span, .pagination .current, .post-page-numbers.current, #submit, .withtag_list > span, .main-bc-before li:before {
+                background-color: #B5FF6B
+/*                background-color: #6bb6ff */
+            }
+
+            #toc_container, #ez-toc-container, .entry-content h3, .li-mainbdr ul, .li-mainbdr ol {
+                border-color: #B5FF6B
+/*                border-color: #6bb6ff */
+            }
+
+            .search-title i, .acc-bc-before li:before {
+                background: #ffb36b
+            }
+
+            .li-accentbdr ul, .li-accentbdr ol {
+                border-color: #ffb36b
+            }
+
+            .pagination a:hover, .li-pastelbc ul, .li-pastelbc ol {
+                background: #E3FFC8
+/*                background: #c8e4ff */
+            }
+
+            body {
+                font-size: 100%
+            }
+
+            @media only screen and (min-width: 481px) {
+                body {
+                    font-size:107%
+                }
+            }
+
+            @media only screen and (min-width: 1030px) {
+                body {
+                    font-size:107%
+                }
+            }
+
+            .totop {
+                background: #A8F75A
+ /*               background: #5ba9f7 */
+            }
+
+            .header-info a {
+                color: #FFF;
+                background: linear-gradient(95deg, #8AFF73, #DDFFD7)
+/*                background: linear-gradient(95deg, #738bff, #85e3ec) */
+            }
+
+            .fixed-menu ul {
+                background: #FFF
+            }
+
+            .fixed-menu a {
+                color: #a2a7ab
+            }
+
+            .fixed-menu .current-menu-item a, .fixed-menu ul li a.active {
+                color: #B5FF6B
+/*                color: #6bb6ff */
+            }
+
+            .post-tab {
+                background: #FFF
+            }
+
+            .post-tab > div {
+                color: #a7a7a7
+            }
+
+            .post-tab > div.tab-active {
+                background: linear-gradient(45deg, #bdb9ff, #67b8ff)
+            }
+
+            body {
+                font-family: "Helvetica", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+            }
+
+            .dfont {
+                font-family: "Quicksand","Helvetica", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+            }
+
+　　　　　/* wpの絵文字に関するスタイル */
+            img.wp-smiley, img.emoji {
+                display: inline !important;
+                border: none !important;
+                box-shadow: none !important;
+                height: 1em !important;
+                width: 1em !important;
+                margin: 0 0.07em !important;
+                vertical-align: -0.1em !important;
+                background: none !important;
+                padding: 0 !important;
+            }
+　　　　　/* End wpの絵文字に関するスタイル */
+
+　　　　　/* 特定のデザインに関するスタイル */
+            .shortcode-star-rating {
+                padding: 0 0.5em;
+            }
+
+            .dashicons {
+                font-size: 20px;
+                width: auto;
+                height: auto;
+                line-height: normal;
+                text-decoration: inherit;
+                vertical-align: middle;
+            }
+
+            .shortcode-star-rating [class^="dashicons dashicons-star-"]:before {
+                color: #FCAE00;
+            }
+
+            .ssr-int {
+                margin-left: 0.2em;
+                font-size: 13px;
+                vertical-align: middle;
+                color: #333;
+            }
+
+            /*.shortcode-star-rating:before,.shortcode-star-rating:after{display: block;height:0;visibility:hidden;content:"\0020";}.shortcode-star-rating:after{clear:both;}*/
+　　　　　/* End 特定のデザインに関するスタイル */
+
+　　　　　/* テキストのラインマーカに関するスタイル */
+            .zebline-color-a {
+                background: linear-gradient(transparent 50%, rgba(245, 205, 205, 1.0) 50%);
+            }
+
+            .zebline-color-b {
+                background: linear-gradient(transparent 50%, #E4878F 50%);
+            }
+
+            .zebline-color-c {
+                background: linear-gradient(transparent 50%, #57BDE9 50%);
+            }
+
+            .zebline-maker {
+                transition: 2.5s;
+            }
+
+            .zebline-maker {
+                font-weight: 700;
+                background-repeat: no-repeat;
+                background-size: 200% 100%;
+                background-position: 200% 0
+            }
+
+            .zebline-show {
+                background-position: 100% 0
+            }
+
+            @-webkit-keyframes blink {
+                0% {
+                    opacity: .1
+                }
+
+                100% {
+                    opacity: 1
+                }
+            }
+
+            @keyframes blink {
+                0% {
+                    opacity: .1
+                }
+
+                100% {
+                    opacity: 1
+                }
+            }
+　　　　　/* End テキストのラインマーカに関するスタイル */
+
+
+            body {
+                margin-bottom: 40px;
+            }
+
+            #footer-fixed-area {
+                position: fixed;
+                z-index: 10000;
+                width: 100%;
+                height: auto;
+                bottom: 0;
+                left: 0;
+                margin: 0;
+                padding: 0;
+            }
+
+            #footer-fixed-area img, #footer-fixed-area a {
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+            }
+
+   <!-- 下記の約550行のスタイルコードは、最上部2つと、サイドバー2つのクレジットカード紹介枠のデザインをつかさどっている様子
+        このまま残して、ほかの広告やイラスト集リンクにつなげてよさそうだ -->
+            .sga-ranking-list figure {
+                float: left;
+                margin-right: 20px;
+                width: 100px;
+                /* 画像の横の長さ。自由に変更可 */
+                height: 75px;
+                /* 画像の縦の長さ。自由に変更可 */
+                overflow: hidden;
+            }
+
+            .sga-ranking-list {
+                margin: 0.8rem 0;
+                padding-bottom: 0.8rem;
+                border-bottom: 1px solid #e1e1e1;
+                text-align: left;
+            }
+
+            .sga-ranking-list::after {
+                clear: both;
+                content: "";
+                display: block;
+            }
+
+            .sga-ranking-list:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+
+            .sga-ranking-list figure a {
+                display: inline;
+            }
+
+            .sga-ranking-list a {
+                overflow: hidden;
+                line-height: 1.4;
+            }
+
+            /* docomoテーブル */
+            .cell-ppkp-head.ppko-red {
+                background: #d20039;
+            }
+
+            .cell-ppkp-head {
+                background: #666666;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .cell-ppko-child {
+                background: #ffe6e6;
+                border-right: 1px solid #cacaca;
+                font-weight: bold;
+                font-size: 110%;
+                text-align: center;
+                height: 100%;
+            }
+
+            .cell-ppko-child .ccplan-bgYellow:before {
+                position: absolute;
+                content: "";
+                bottom: 3px;
+                height: 6px;
+                width: 100%;
+                background: #fff952;
+                z-index: -1;
+            }
+
+            mark {
+                background: linear-gradient(transparent 70%, yellow 7%);
+                color: black;
+                color: #d20039;
+            }
+
+            .entry-content h2 {
+                margin-right: 5px;
+                margin-left: 5px;
+                padding: 0.2em 0.5em;
+                border: dashed 1px #fff;
+                background: #E3FFC8;
+/*                background: #c8e4ff; */
+                box-shadow: 0 0 0 5px #E3FFC8;
+/*                box-shadow: 0 0 0 5px #c8e4ff; */
+                color: #454545;
+            }
+
+            /* お勧めカード */
+            .simple-box8 {
+                padding: 20px 25px;
+                box-sizing: border-box;
+                background: #F7F7F7;
+                border-left: 2px solid #6bb6ff;
+            }
+
+            .entry-content .simple-box8 ul {
+                margin-bottom: 0em;
+                padding: 0;
+                border: none;
+                list-style: none;
+            }
+
+            .top-icon-list li {
+                border-bottom: 1px solid #ccc;
+                padding: 5px 0px !important;
+            }
+
+            .top-icon-list i {
+                float: right;
+                color: #E75685;
+            }
+
+            /* 殿堂入りカード */
+            .kaisetsu-box5 {
+                position: relative;
+                border-radius: 4px;
+                background-color: #e8f4ff;
+                padding: 20px 25px;
+                margin-top: 20px!important;
+            }
+
+            .kaisetsu-box5-title {
+                position: absolute;
+                line-height: 0;
+                font-size: 18px;
+                left: 20px;
+                top: -18px;
+                color: #fff;
+                padding: 18px 15px;
+                background: #6bb6ff;
+                border-radius: 2px;
+                letter-spacing: 0px!important;
+                z-index: 999;
+            }
+
+            .entry-content .kaisetsu-box5 ul {
+                margin-bottom: 0em;
+                padding: 0;
+                border: none;
+                padding-left: 20px;
+            }
+
+            .entry-content .kaisetsu-box5 li {
+                color: #E75685;
+            }
+
+            .entry-content .kaisetsu-box5 strong {
+                color: #000;
+            }
+
+            .c-red {
+                color: #E75685;
+            }
+
+            /* カードコンテナ */
+            .cardcontainer {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-wrap: wrap;
+                -webkit-box-shadow: 0 8px 15px 0 rgb(0 0 0 / 16%);
+                box-shadow: 0 8px 15px 0 rgb(0 0 0 / 16%);
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .cardinfoleft {
+                width: 35%;
+            }
+
+            .cardinforight {
+                padding: 0 0 20px 20px;
+                width: 65%;
+            }
+
+            .cardinforight p {
+                margin: 0em;
+                font-weight: 800;
+            }
+
+            .cardcontainer ul {
+                margin: 0em;
+                padding: 0;
+                border: none;
+                list-style: none;
+            }
+
+            .cardcontainer i {
+                color: #E75685;
+            }
+
+            .cardcontainer table tr th, .cardcontainer table tr td {
+                font-size: 12px;
+                padding: 4px;
+            }
+
+            .cardmoushikomi {
+                width: 100%;
+            }
+
+            .cardmoushikomi a {
+                display: block;
+                width: 320px;
+                height: 36px;
+                margin: 0 auto;
+                padding-top: 5px;
+                color: #fff!important;
+                text-align: center;
+                text-decoration: none!important;
+                font-weight: 700;
+                background-color: #4f96f6;
+                border-radius: 10px;
+                -webkit-box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+                box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+            }
+
+            .cardcontainer table tr th {
+                background-color: #e8f4ff!important;
+            }
+
+            @media screen and (max-width: 480px) {
+                .cardinfoleft {
+                    width: 100%;
+                }
+
+                .cardinforight {
+                    padding: 0;
+                    width: 100%;
+                }
+            }
+
+            /* 枠付きリスト */
+            .simple-box3 ul {
+                border: 3px double#4f96f6;
+            }
+
+            .simple-box3 ::marker {
+                color: #E75685;
+            }
+
+            /* アピールエリア */
+            .simple-box7 {
+                padding: 20px 15px;
+                border: 10px solid #c8e4ff;
+                border-radius: 4px;
+                position: relative;
+            }
+
+            .marker {
+                background: linear-gradient( transparent 60%, #f9ddd6 0% );
+            }
+
+            .t-aligncenter {
+                text-align: center;
+            }
+
+            .red-huki:before {
+                left: 0;
+                -webkit-transform: rotate(50deg);
+                transform: rotate(50deg);
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                width: 20px;
+                height: 3px;
+                border-radius: 3px;
+                background-color: #F16F6F;
+                content: "";
+            }
+
+            .red-huki:after {
+                right: 0;
+                -webkit-transform: rotate(-50deg);
+                transform: rotate(-50deg);
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                width: 20px;
+                height: 3px;
+                border-radius: 3px;
+                background-color: #F16F6F;
+                content: "";
+            }
+
+            .red-huki {
+                display: inline-block;
+                position: relative;
+                padding: 0 25px;
+                color: #F16F6F;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: 1px;
+            }
+
+            .color-button01-big a, .color-button01-big a:hover, .color-button01-big:before {
+                background-color: #4f96f6!important;
+                padding-top: 20px!important;
+                padding-bottom: 20px!important;
+            }
+
+            .color-button01-big a {
+                color: #fff!important;
+            }
+
+            .color-button01-big a, .color-button02-big a {
+                transition: color 0.3s ease,background 0.3s ease,transform 0.3s ease,opacity 0.3s ease,border 0.3s ease,padding 0.3s ease,left 0.3s ease,bottom 0.3s ease,box-shadow 0.3s ease;
+                border-radius: 4px;
+                text-align: center;
+                font-size: 1.2rem;
+                padding: 20px 30px;
+                max-width: 100%!important;
+                vertical-align: bottom;
+                display: block;
+                text-decoration: none!important;
+                transform: perspective(0);
+                width: 75%;
+                margin: auto;
+            }
+
+            @media screen and (max-width: 480px) {
+                .color-button01-big a, .color-button02-big a {
+                    width:100%;
+                    font-size: 1rem;
+                }
+            }
